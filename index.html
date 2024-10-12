@@ -143,13 +143,13 @@
         // Load the flipbook with the new PDF URL or blob
         $("#flipbookContainer").flipBook(pdfUrl, options);
       }
-
+    
       // Default PDF URL
       var defaultPdf = 'https://utfs.io/f/aLxFAGHMpUDrHJi2MUlQmdfILsR4SYX9vh5tGa0AxUy31OwF';
       
       // Load the flipbook with the default PDF on page load
       loadFlipbook(defaultPdf);
-
+    
       // Toggle the input panel visibility
       $("#togglePanelBtn").click(function() {
         $("#inputPanel").toggleClass("hidden");
@@ -160,7 +160,7 @@
           $("#togglePanelBtn").text("Hide Options");
         }
       });
-
+    
       // Show/Hide input fields based on selection (URL or local)
       $("#pdfSource").change(function() {
         var selectedSource = $(this).val();
@@ -172,7 +172,10 @@
           $("#fileInputField").removeClass("hidden");
         }
       });
-
+    
+      // Initially hide the file input field and set the default to URL PDF
+      $("#fileInputField").addClass("hidden");
+    
       // Event listener for the button click to load PDF
       $("#loadPdfBtn").click(function() {
         var selectedSource = $("#pdfSource").val();
@@ -200,7 +203,7 @@
           }
         }
       });
-
+    
       // Event listener for the button click to load YouTube playlist
       $("#loadYoutubeBtn").click(function() {
         var youtubeUrl = $("#youtubeUrl").val();
