@@ -11,18 +11,6 @@ html, body {
   overflow: hidden;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-#flipbookContainer {
-  height: 100%;
-  overflow: hidden;
-}
-
 #mediaContainer {
   width: 300px;
   height: 200px;
@@ -44,6 +32,7 @@ iframe {
   height: 100%;
 }
 
+/* Button styles for the top right fixed buttons */
 .fixed.top-4.right-4.z-50 a {
   display: flex;
   align-items: center;
@@ -59,12 +48,23 @@ iframe {
   background-color: #2D3748;
 }
 
-.fixed.bottom-4.left-4.z-50 button {
+/* Button styles for the bottom left fixed buttons */
+.fixed.bottom-4.left-4 {
+  display: flex; 
+  gap: 10px;
+}
+
+.fixed.bottom-4.left-4 button {
   padding: 0.5rem 1rem;
   background-color: #48BB78;
   color: white;
   border-radius: 0.375rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.fixed.bottom-4.left-4 button:hover {
+  background-color: #38A169;
 }
 
 #inputPanel {
@@ -88,6 +88,7 @@ iframe {
   border-radius: 0.375rem;
 }
 
+/* Input Panel Button Styles */
 #loadPdfBtn {
   background-color: #4299E1;
 }
@@ -100,3 +101,121 @@ iframe {
   margin-right: 0.5rem;
 }
 
+/* Quote Note Panel Styles */
+#quoteNotesPanel {
+  max-height: 300px;
+  overflow-y: auto;
+  width: 300px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#quoteNotesPanel.hidden {
+  display: none;
+}
+
+#quoteList {
+  max-height: 150px; 
+  overflow-y: auto;
+  /* width: calc(100% - 0px); */
+}
+
+.quote-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.quote-container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.quote-text {
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.quote-text:hover {
+  overflow: visible;
+  white-space: normal;
+}
+
+.quote-text:hover {
+  overflow: visible;
+  white-space: normal;
+}
+
+.quote-tooltip {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: opacity 0.2s ease;
+}
+
+.quote-container:hover .quote-tooltip {
+  display: block;
+}
+
+.quote-text:hover::after {
+  content: attr(data-fulltext);
+  visibility: visible;
+  opacity: 1;
+}
+
+.quote-text::after {
+  content: '';
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+.quote-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.quote-item button {
+  margin-left: 8px;
+}
+
+/* Text color for quote input for better visibility */
+#quoteInput {
+  color: gray;
+  width: calc(100% - 80px);
+  margin-right: 5px;
+}
+
+#addQuoteBtn {
+  padding: 0.5rem;
+}
+
+/* Flexbox layout for buttons at the top */
+.fixed.top-4.left-4 {
+  display: flex; 
+  gap: 10px;
+  z-index: 100;
+}
+
+/* Hover effect for buttons */
+.fixed.top-4.left-4 button {
+  transition: background-color 0.2s ease;
+}
+
+.fixed.top-4.left-4 button:hover {
+  background-color: #3F485A;
+}
