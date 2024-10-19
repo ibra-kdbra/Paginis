@@ -1,5 +1,5 @@
 # Paginis
-PDF flipbook website to make your life easier, it can take PDF as input and generate a flipbook.weither it's url, local file, featured youtube playlist to play while reading.
+A PDF flipbook website designed to make your life easier. It can take a PDF as input and generate a flipbook, whether it's a URL, local file, or a featured YouTube playlist to play while reading.
 
 
 ## Tech Stack
@@ -12,10 +12,11 @@ PDF flipbook website to make your life easier, it can take PDF as input and gene
 Check the pdf if using the link Make sure that cross-origin resource sharing is enabled 
 
 ## File Structure
-
+<details>
+<summary>Click to expand!</summary>
 This flipbook plugin is jQuery-based. Basically, you can copy the files in folder to your working directory. You don't need to include the lib folder..
 
-```
+```sh
 lib/ 
     ├── css/
     │   ├── dflip.css
@@ -49,33 +50,26 @@ lib/
 And ensure the following files are included in the html.
 
 CSS:
-```
-            
-                <!-- Flipbook StyleSheet -->
-                <link href="http://www.yoursite.com/dflip/css/dflip.css" rel="stylesheet" type="text/css">
+```css
+<!-- Flipbook StyleSheet -->
+<link href="http://www.yoursite.com/dflip/css/dflip.css" rel="stylesheet" type="text/css">
 
-                <!-- Icons Stylesheet -->
-                <link href="http://www.yoursite.com/dflip/css/themify-icons.css" rel="stylesheet" type="text/css">
-            
-        
+<!-- Icons Stylesheet -->
+<link href="http://www.yoursite.com/dflip/css/themify-icons.css" rel="stylesheet" type="text/css">     
 ```
 JavaScript:
 
 Note: Include them just before </body> tag. Don't use them in head.
 
-```
-            
+```javascript
 <!-- jQuery 1.9.1 or above -->
 <script src="http://www.yoursite.com/dflip/js/libs/jquery.min.js" type="text/javascript"></script>
 
 <!-- Flipbook main Js file -->
-<script src="http://www.yoursite.com/dflip/js/dflip.min.js" type="text/javascript"></script>
-            
-        
+<script src="http://www.yoursite.com/dflip/js/dflip.min.js" type="text/javascript"></script>     
 ```
 Basic HTML Template
-```
-
+```html
     <html>
     <head>
     <meta charset="utf-8">
@@ -103,10 +97,11 @@ Basic HTML Template
     </html>
 ```
 Create Flipbook through Button lightbox.
-```
+```html
 <div class="_df_button"
     source="http://www.yoursite.com/books/dflip manual.pdf"
     id="df_manual_button">
     Button
 </div>
 ```
+</details>
