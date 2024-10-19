@@ -17,32 +17,43 @@ Check the pdf if using the link Make sure that cross-origin resource sharing is 
 This flipbook plugin is jQuery-based. Basically, you can copy the files in folder to your working directory. You don't need to include the lib folder..
 
 ```sh
-lib/ 
-    ├── css/
-    │   ├── dflip.css
-    │   └── themify-icons.css
-    │
-    ├── fonts/
-    │   ├── themify.eot
-    │   ├── themify.svg
-    │   ├── themify.ttf
-    │   └── themify.woff
-    │
-    ├── images/
-    │   └── loading.gif
-    |
-    ├── sound/
-    │   └── turn2.mp3
-    │
-    └── js/
-        ├── dflip.js
-        ├── dflip.min.js
-        └── libs/
-            ├── jquery.min.js
-            ├── pdf.min.js
-            ├── pdf.worker.min.js
-            ├── three.min.js
-            └── mockup.min.js
+└── 📁pdf-flipbook
+    └── 📁lib
+        └── 📁css
+            └── min.css
+            └── style.css
+            └── themify-icons.min.css
+        └── 📁fonts
+            └── themify.eot
+            └── themify.svg
+            └── themify.ttf
+            └── themify.woff
+        └── 📁images
+            └── 📁pdfjs
+            └── 📁textures
+                └── white.jpg
+            └── loading.gif
+            └── viewer.svg
+        └── 📁js
+            └── 📁libs
+                └── 📁cmaps
+                └── compatibility.js
+                └── jquery.min.js
+                └── mockup.min.js
+                └── pdf.min.js
+                └── pdf.worker.min.js
+                └── three.min.js
+            └── dflip.min.js
+            └── load.js
+            └── quotes.js
+        └── 📁sound
+            └── turn.mp3
+            └── turn2.mp3
+            └── turn2a.mp3
+            └── turn3.mp3
+    └── .gitignore
+    └── index.html
+    └── README.md
 
 ```
 
