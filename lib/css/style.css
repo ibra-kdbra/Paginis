@@ -37,15 +37,17 @@ iframe {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: #4A5568;
-  color: white;
-  border-radius: 0.375rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s;
+  background-color: #4B3C3C; /* Dark aged background */
+  color: #EAEAEA; /* Light text color */
+  border: 1px solid #8B6F6F; /* Darker border */
+  border-radius: 8px; /* More rounded corners for a classy shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 .fixed.top-4.right-4.z-50 a:hover {
-  background-color: #2D3748;
+  background-color: #3E3232; /* Darker on hover */
+  color: #FFFFFF; /* Brighter text color on hover */
 }
 
 /* Button styles for the bottom left fixed buttons */
@@ -56,15 +58,17 @@ iframe {
 
 .fixed.bottom-4.left-4 button {
   padding: 0.5rem 1rem;
-  background-color: #48BB78;
-  color: white;
-  border-radius: 0.375rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s;
+  background-color: #4B3C3C; /* Dark aged background */
+  color: #EAEAEA; /* Light text color */
+  border: 1px solid #8B6F6F; /* Darker border */
+  border-radius: 8px; /* More rounded corners for a classy shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 .fixed.bottom-4.left-4 button:hover {
-  background-color: #38A169;
+  background-color: #3E3232; /* Darker on hover */
+  color: #FFFFFF; /* Brighter text color on hover */
 }
 
 #inputPanel {
@@ -83,18 +87,22 @@ iframe {
 }
 
 .flex.justify-end button {
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   color: white;
   border-radius: 0.375rem;
 }
 
 /* Input Panel Button Styles */
 #loadPdfBtn {
-  background-color: #4299E1;
+  background-color: #4B3C3C; /* Dark aged background */
+  color: #EAEAEA; /* Light text color */
+  border: 1px solid #8B6F6F; /* Darker border */
 }
 
 #loadYoutubeBtn {
-  background-color: #F56565;
+  background-color: #4B3C3C; /* Dark aged background */
+  color: #EAEAEA; /* Light text color */
+  border: 1px solid #8B6F6F; /* Darker border */
 }
 
 .flex.justify-end button:not(:last-child) {
@@ -113,6 +121,7 @@ iframe {
   top: 0;
   left: 0;
 }
+
 #quoteNotesPanel.hidden {
   display: none;
 }
@@ -120,7 +129,6 @@ iframe {
 #quoteList {
   max-height: 150px; 
   overflow-y: auto;
-  /* width: calc(100% - 0px); */
 }
 
 .quote-item {
@@ -143,11 +151,6 @@ iframe {
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
-}
-
-.quote-text:hover {
-  overflow: visible;
-  white-space: normal;
 }
 
 .quote-text:hover {
@@ -183,7 +186,6 @@ iframe {
   transition: opacity 0.3s;
 }
 
-
 .quote-buttons {
   display: flex;
   gap: 5px;
@@ -213,9 +215,10 @@ iframe {
 
 /* Hover effect for buttons */
 .fixed.top-4.left-4 button {
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .fixed.top-4.left-4 button:hover {
-  background-color: #3F485A;
+  background-color: #3E3232; /* Darker on hover */
+  color: #FFFFFF; /* Brighter text color on hover */
 }
