@@ -23,38 +23,36 @@
 
   <!-- GitHub Button positioned at the top right -->
   <div class="fixed top-4 right-4 z-50">
-    <a href="https://github.com/ibra-kdbra/Paginis" target="_blank">
+    <a href="https://github.com/ibra-kdbra/Paginis" target="_blank" class="flex items-center px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">
       <i class="fab fa-github mr-2"></i> <!-- GitHub Icon -->
       GitHub Repository
     </a>
   </div>
 
   <!-- Button to toggle the quote note panel visibility -->
-<div class="fixed top-4 left-4 z-100 flex space-x-2">
-  <button id="toggleQuotePanelBtn" class="px-4 py-2 bg-purple-500 text-white rounded-lg shadow-md">Quotes</button>
-  <button id="exportQuotesBtn" class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md">Export Quotes</button>
-</div>
-
-<!-- Quote Notes Panel -->
-<div id="quoteNotesPanel" class="fixed top-0 left-0 p-4 bg-gray-800 text-white rounded-bl-lg shadow-lg z-90 hidden">
-  <h3 class="text-lg mb-2">Quote Notes</h3>
-
-  <div class="mb-4 flex items-center mt-4"> <!-- Added margin-top here -->
-      <input id="quoteInput" type="text" placeholder="Enter your quote" 
-      class="px-2 py-1 border border-gray-400 rounded-lg w-full">
-      <button id="addQuoteBtn" class="px-2 py-1 bg-green-500 text-white rounded-lg ml-2">Add</button>
+  <div class="fixed top-4 left-4 z-100 flex space-x-2">
+    <button id="toggleQuotePanelBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Quotes</button>
+    <button id="exportQuotesBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Export Quotes</button>
   </div>
-  
-  <ul id="quoteList" class="list-disc pl-5">
+
+  <!-- Quote Notes Panel -->
+  <div id="quoteNotesPanel" class="fixed top-0 left-0 p-4 bg-gray-800 text-white rounded-bl-lg shadow-lg z-90 hidden">
+    <h3 class="text-lg mb-2">Quote Notes</h3>
+
+    <div class="mb-4 flex items-center mt-4">
+      <input id="quoteInput" type="text" placeholder="Enter your quote" 
+             class="px-2 py-1 border border-gray-400 rounded-lg w-full">
+      <button id="addQuoteBtn" class="px-2 py-1 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] rounded-lg ml-2 transition duration-300 hover:bg-[#3E3232] hover:text-white">Add</button>
+    </div>
+
+    <ul id="quoteList" class="list-disc pl-5">
       <!-- Quotes will be dynamically added here -->
-  </ul>
-</div>
-
-
+    </ul>
+  </div>
 
   <!-- Button to toggle the input panel visibility -->
   <div class="fixed bottom-4 left-4 z-50">
-    <button id="togglePanelBtn">Hide Options</button>
+    <button id="togglePanelBtn" class="bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] rounded-lg px-4 py-2 shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Hide Options</button>
   </div>
 
   <!-- Input panel to choose PDF source and load the PDF -->
@@ -67,7 +65,7 @@
       </select>
     </div>
 
-    <!-- Input field for the PDF URL with updated text color -->
+    <!-- Input field for the PDF URL -->
     <div id="urlInputField" class="flex justify-center mb-4">
       <input id="pdfUrl" type="text" placeholder="Enter PDF URL" 
              class="px-4 py-2 border border-gray-400 rounded-lg w-full bg-gray-800 text-gray-300 placeholder-gray-500">
@@ -87,8 +85,8 @@
 
     <!-- Button to load the PDF or YouTube playlist -->
     <div class="flex justify-end">
-      <button id="loadPdfBtn">Load PDF</button>
-      <button id="loadYoutubeBtn">Load Playlist</button>
+      <button id="loadPdfBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Load PDF</button>
+      <button id="loadYoutubeBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Load Playlist</button>
     </div>
   </div>
 
@@ -108,7 +106,6 @@
   <!-- Main JavaScript code -->
   <script src="lib/js/load.js"></script>
   <script src="lib/js/quoteNotes.js"></script>
-
 
 </body>
 </html>
