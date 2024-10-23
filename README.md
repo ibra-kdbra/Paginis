@@ -116,3 +116,17 @@ Create Flipbook through Button lightbox.
 </div>
 ```
 </details>
+
+### 🔗 Libraries & Tools
+
+- **[PDF.js](https://mozilla.github.io/pdf.js/)**  
+  _A powerful open-source library for rendering PDF files directly in the browser._
+
+- **[Three.js](https://threejs.org/)**  
+  _A flexible JavaScript 3D library for creating immersive WebGL experiences._
+
+- **[DFlip](https://github.com/dearhive/dearflip-js-flipbook)**  
+  _A smooth and customizable flipbook plugin, perfect for converting PDFs into interactive books._
+
+- **[JQuery_DFlip](https://www.icootoo.com/pdf/documentation.html)**  
+  _An extension of DFlip with support for jQuery, adding easy-to-use flipbook effects to your documents._ 
