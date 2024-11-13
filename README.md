@@ -1,6 +1,7 @@
 # Paginis
 A PDF flipbook website designed to make your life easier. It can take a PDF as input and generate a flipbook, whether it's a URL, local file, or a featured YouTube playlist to play while reading.
 
+![Sample](/assets/caputred.png)
 
 ## Tech Stack
 [![Tech Stack](https://skillicons.dev/icons?i=threejs,js,jquery,css,html,tailwindcss,svg)](https://skillicons.dev)
