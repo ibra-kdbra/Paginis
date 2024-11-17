@@ -17,7 +17,7 @@ Check the pdf if using the link Make sure that cross-origin resource sharing is 
 <summary>Click to expand!</summary>
 This flipbook plugin is jQuery-based. Basically, you can copy the files in folder to your working directory. You don't need to include the lib folder..
 
-```
+```git 
 └── 📁pdf-flipbook
     └── 📁assets
     └── 📁lib
@@ -45,7 +45,7 @@ This flipbook plugin is jQuery-based. Basically, you can copy the files in folde
                 └── mockup.min.js
                 └── pdf.min.js
                 └── pdf.worker.min.js
-                └── three.min.js
+                └── three.min.jsgit 
             └── 📁quotes
                 └── db.js
                 └── main.js
