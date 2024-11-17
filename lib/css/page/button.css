@@ -1,0 +1,49 @@
+/* buttons.css */
+
+.fixed.top-4.right-4.z-50 a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #4B3C3C;
+    color: #EAEAEA;
+    border: 1px solid #8B6F6F;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .fixed.top-4.right-4.z-50 a:hover {
+    background-color: #3E3232;
+    color: #FFFFFF;
+  }
+  
+  .fixed.bottom-4.left-4 {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .fixed.bottom-4.left-4 button {
+    padding: 0.5rem 1rem;
+    background-color: #4B3C3C;
+    color: #EAEAEA;
+    border: 1px solid #8B6F6F;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .fixed.bottom-4.left-4 button:hover {
+    background-color: #3E3232;
+    color: #FFFFFF;
+  }
+  
+  #quoteInput {
+    color: gray;
+    width: calc(100% - 80px);
+    margin-right: 5px;
+  }
+  
+  #addQuoteBtn {
+    padding: 0.5rem;
+  }
+  

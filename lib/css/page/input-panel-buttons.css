@@ -1,0 +1,22 @@
+#loadPdfBtn {
+    background-color: #4B3C3C; 
+    color: #EAEAEA; 
+    border: 1px solid #8B6F6F;
+  }
+  
+  #loadYoutubeBtn {
+    background-color: #4B3C3C; 
+    color: #EAEAEA; 
+    border: 1px solid #8B6F6F;
+  }
+  
+  .flex.justify-end button {
+    padding: 0.5rem;
+    color: white;
+    border-radius: 0.375rem;
+  }
+  
+  .flex.justify-end button:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  
