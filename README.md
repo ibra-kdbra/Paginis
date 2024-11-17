@@ -17,45 +17,48 @@ Check the pdf if using the link Make sure that cross-origin resource sharing is 
 <summary>Click to expand!</summary>
 This flipbook plugin is jQuery-based. Basically, you can copy the files in folder to your working directory. You don't need to include the lib folder..
 
-```sh
+```
 └── 📁pdf-flipbook
+    └── 📁assets
     └── 📁lib
         └── 📁css
+            └── 📁page
+                └── button.css
+                └── input-panel-buttons.css
+                └── layout.css
+                └── panel.css
+                └── quotes.css
             └── min.css
             └── style.css
             └── themify-icons.min.css
         └── 📁fonts
-            └── themify.eot
-            └── themify.svg
-            └── themify.ttf
-            └── themify.woff
+
         └── 📁images
             └── 📁pdfjs
             └── 📁textures
                 └── white.jpg
             └── loading.gif
-            └── viewer.svg
         └── 📁js
             └── 📁libs
-                └── 📁cmaps
                 └── compatibility.js
                 └── jquery.min.js
                 └── mockup.min.js
                 └── pdf.min.js
                 └── pdf.worker.min.js
                 └── three.min.js
+            └── 📁quotes
+                └── db.js
+                └── main.js
+                └── ui.js
             └── dflip.min.js
             └── load.js
-            └── quotes.js
+            └── media.js
+            └── ui.js
         └── 📁sound
-            └── turn.mp3
-            └── turn2.mp3
-            └── turn2a.mp3
-            └── turn3.mp3
     └── .gitignore
     └── index.html
+    └── LICENSE
     └── README.md
-
 ```
 
 ## File Template
