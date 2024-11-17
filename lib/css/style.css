@@ -32,43 +32,41 @@ iframe {
   height: 100%;
 }
 
-/* Button styles for the top right fixed buttons */
 .fixed.top-4.right-4.z-50 a {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: #4B3C3C; /* Dark aged background */
-  color: #EAEAEA; /* Light text color */
-  border: 1px solid #8B6F6F; /* Darker border */
-  border-radius: 8px; /* More rounded corners for a classy shape */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  background-color: #4B3C3C;
+  color: #EAEAEA;
+  border: 1px solid #8B6F6F;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .fixed.top-4.right-4.z-50 a:hover {
-  background-color: #3E3232; /* Darker on hover */
-  color: #FFFFFF; /* Brighter text color on hover */
+  background-color: #3E3232;
+  color: #FFFFFF;
 }
 
-/* Button styles for the bottom left fixed buttons */
 .fixed.bottom-4.left-4 {
-  display: flex; 
+  display: flex;
   gap: 10px;
 }
 
 .fixed.bottom-4.left-4 button {
   padding: 0.5rem 1rem;
-  background-color: #4B3C3C; /* Dark aged background */
-  color: #EAEAEA; /* Light text color */
-  border: 1px solid #8B6F6F; /* Darker border */
-  border-radius: 8px; /* More rounded corners for a classy shape */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  background-color: #4B3C3C;
+  color: #EAEAEA;
+  border: 1px solid #8B6F6F;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .fixed.bottom-4.left-4 button:hover {
-  background-color: #3E3232; /* Darker on hover */
-  color: #FFFFFF; /* Brighter text color on hover */
+  background-color: #3E3232;
+  color: #FFFFFF;
 }
 
 #inputPanel {
