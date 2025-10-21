@@ -19,27 +19,30 @@
 <body class="bg-gray-900 text-white">
 
   <div class="fixed top-4 right-4 z-50">
-    <a href="https://github.com/ibra-kdbra/Paginis" target="_blank" class="flex items-center px-4 py-2 bg-[#4B3C3C] 
-    text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">
-      <i class="fab fa-github mr-2"></i>
-      GitHub Repository
+    <a href="https://github.com/ibra-kdbra/Paginis" target="_blank" class="flex items-center px-3 py-3 bg-[#4B3C3C]
+    text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="GitHub Repository">
+      <i class="fab fa-github text-lg"></i>
     </a>
   </div>
 
   <!-- Toggle Direction Button placed under GitHub Button -->
   <div class="fixed top-20 right-4 z-50">
-    <button id="toggleDirectionBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
-    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">
-      Toggle Direction
+    <button id="toggleDirectionBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
+    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Toggle Direction">
+      <i class="fas fa-exchange-alt"></i>
     </button>
   </div>
 
   <!-- Button to toggle the quote note panel visibility -->
   <div class="fixed top-4 left-4 z-100 flex space-x-2">
-    <button id="toggleQuotePanelBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
-    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Quotes</button>
-    <button id="exportQuotesBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
-    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Export Quotes</button>
+    <button id="toggleQuotePanelBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
+    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Toggle Quotes Panel">
+      <i class="fas fa-comments"></i>
+    </button>
+    <button id="exportQuotesBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
+    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Export Quotes">
+      <i class="fas fa-download"></i>
+    </button>
   </div>
 
   <!-- Quote Notes Panel -->
@@ -47,10 +50,12 @@
     <h3 class="text-lg mb-2">Quote Notes</h3>
 
     <div class="mb-4 flex items-center mt-4">
-      <input id="quoteInput" type="text" placeholder="Enter your quote" 
+      <input id="quoteInput" type="text" placeholder="Enter your quote"
             class="px-2 py-1 border border-gray-400 rounded-lg w-full">
-      <button id="addQuoteBtn" class="px-2 py-1 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
-      rounded-lg ml-2 transition duration-300 hover:bg-[#3E3232] hover:text-white">Add</button>
+      <button id="addQuoteBtn" class="px-2 py-1 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
+      rounded-lg ml-2 transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Add Quote">
+        <i class="fas fa-plus"></i>
+      </button>
     </div>
 
     <ul id="quoteList" class="list-disc pl-5">
@@ -60,8 +65,10 @@
 
   <!-- Button to toggle the input panel visibility -->
   <div class="fixed bottom-4 left-4 z-50">
-    <button id="togglePanelBtn" class="bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
-    rounded-lg px-4 py-2 shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Hide Options</button>
+    <button id="togglePanelBtn" class="bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
+    rounded-lg px-4 py-2 shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Toggle Options Panel">
+      <i class="fas fa-cog"></i>
+    </button>
   </div>
 
   <!-- Input panel to choose PDF source and load the PDF -->
@@ -94,10 +101,14 @@
 
     <!-- Button to load the PDF or YouTube playlist -->
     <div class="flex justify-end">
-      <button id="loadPdfBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
-      rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Load PDF</button>
-      <button id="loadYoutubeBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
-      rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Load Playlist</button>
+      <button id="loadPdfBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
+      rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Load PDF">
+        <i class="fas fa-file-pdf"></i>
+      </button>
+      <button id="loadYoutubeBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
+      rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Load YouTube Playlist">
+        <i class="fab fa-youtube"></i>
+      </button>
     </div>
   </div>
 
@@ -106,8 +117,10 @@
 
   <!-- Container for the YouTube player -->
   <div id="mediaContainer" class="hidden">
-    <button id="closeMediaContainer" class="absolute top-2 right-2 text-white bg-red-500 rounded-full p-1">X</button>
-    <iframe id="youtubePlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+    <button id="closeMediaContainer" class="absolute top-2 right-2 text-white bg-red-500 rounded-full p-1" title="Close Media Player">
+      <i class="fas fa-times"></i>
+    </button>
+    <iframe id="youtubePlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
     encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
