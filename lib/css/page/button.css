@@ -1,18 +1,25 @@
 .fixed.top-4.right-4.z-50 a {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  justify-content: center;
+  padding: 0.75rem;
   background-color: #4B3C3C;
   color: #EAEAEA;
   border: 1px solid #8B6F6F;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
+  width: 50px;
+  height: 50px;
 }
 
 .fixed.top-4.right-4.z-50 a:hover {
   background-color: #3E3232;
   color: #FFFFFF;
+}
+
+.fixed.top-4.right-4.z-50 a i {
+  font-size: 1.25rem;
 }
 
 /* Bottom-left buttons (e.g., Hide Options) */
@@ -45,4 +52,38 @@
 
 #addQuoteBtn {
   padding: 0.5rem;
+}
+
+/* Icon button improvements */
+button i {
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+
+
+/* Button hover effects for better UX */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Special styling for close media button */
+#closeMediaContainer {
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+#closeMediaContainer:hover {
+  transform: scale(1.1);
+  background-color: rgba(220, 38, 38, 0.9) !important;
+}
+
+#closeMediaContainer i {
+  font-size: 0.875rem;
 }
