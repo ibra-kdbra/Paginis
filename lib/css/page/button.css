@@ -60,6 +60,11 @@ button i {
   pointer-events: none;
 }
 
+/* Specific styling for quotes panel button */
+#toggleQuotePanelBtn i {
+  font-size: 1.1rem;
+}
+
 
 
 /* Button hover effects for better UX */

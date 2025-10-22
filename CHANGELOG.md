@@ -5,6 +5,9 @@
 - **`6e55197`** - updated for a better UI/UX *(6 minutes ago)*
 - **`4d3135a`** - update style for the icons *(6 minutes ago)*
 
+### ✨ Latest Change
+- **Quotes Panel Icon**: Changed from comments icon to double quotes icon (`❝❞`) for better visual representation
+
 ---
 
 ## 🚀 Major Features & Improvements
