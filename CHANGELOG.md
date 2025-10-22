@@ -6,7 +6,7 @@
 - **`4d3135a`** - update style for the icons *(6 minutes ago)*
 
 ### ✨ Latest Change
-- **Quotes Panel Icon**: Changed from comments icon to double quotes icon (`❝❞`) for better visual representation
+- **Quotes Panel Icon**: Fixed icon display issue - changed from non-existent `fa-quotes` to `fa-quote-left` (❝) for proper double quotes representation
 
 ---
 
