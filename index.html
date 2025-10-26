@@ -9,7 +9,7 @@
 
   <link href="lib/css/min.css" rel="stylesheet" type="text/css">
   <link href="lib/css/themify-icons.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="lib/css/style.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
@@ -18,6 +18,7 @@
 
 <body class="bg-gray-900 text-white">
 
+  <!-- GitHub Link -->
   <div class="fixed top-4 right-4 z-50">
     <a href="https://github.com/ibra-kdbra/Paginis" target="_blank" class="flex items-center px-3 py-3 bg-[#4B3C3C]
     text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="GitHub Repository">
@@ -25,104 +26,124 @@
     </a>
   </div>
 
-  <!-- Toggle Direction Button placed under GitHub Button -->
+  <!-- Unified Control Panel Toggle Button -->
   <div class="fixed top-20 right-4 z-50">
-    <button id="toggleDirectionBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
-    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Toggle Direction">
-      <i class="fas fa-exchange-alt"></i>
+    <button id="toggleUnifiedPanelBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
+    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Toggle Control Panel">
+      <i class="fas fa-bars"></i>
     </button>
   </div>
 
-  <!-- Button to toggle the quote note panel visibility -->
-  <div class="fixed top-4 left-4 z-100 flex space-x-2">
-    <button id="toggleQuotePanelBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
-    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Toggle Quotes Panel">
-      <i class="fas fa-quote-left"></i>
-    </button>
-    <button id="exportQuotesBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
-    rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Export Quotes">
-      <i class="fas fa-download"></i>
-    </button>
-  </div>
-
-  <!-- Quote Notes Panel -->
-  <div id="quoteNotesPanel" class="fixed top-0 left-0 p-4 bg-gray-800 text-white rounded-bl-lg shadow-lg z-90 hidden">
-    <h3 class="text-lg mb-2">Quote Notes</h3>
-
-    <div class="mb-4 flex items-center mt-4">
-      <input id="quoteInput" type="text" placeholder="Enter your quote"
-            class="px-2 py-1 border border-gray-400 rounded-lg w-full">
-      <button id="addQuoteBtn" class="px-2 py-1 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
-      rounded-lg ml-2 transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Add Quote">
-        <i class="fas fa-plus"></i>
-      </button>
+  <!-- Unified Right-Side Control Panel -->
+  <div id="unifiedPanel" class="panel-container">
+    <div class="panel-header">
+      <h2>🎛️ Control Panel</h2>
+      <button id="closeUnifiedPanelBtn" class="panel-close">✕</button>
     </div>
 
-    <ul id="quoteList" class="list-disc pl-5">
-      <!-- Quotes will be dynamically added here -->
-    </ul>
-  </div>
-
-  <!-- Button to toggle the input panel visibility -->
-  <div class="fixed bottom-4 left-4 z-50">
-    <button id="togglePanelBtn" class="bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
-    rounded-lg px-4 py-2 shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Toggle Options Panel">
-      <i class="fas fa-cog"></i>
-    </button>
-  </div>
-
-  <!-- Input panel to choose PDF source and load the PDF -->
-  <div id="inputPanel">
-    <!-- Dropdown to select between URL or local PDF -->
-    <div class="flex justify-center mb-4">
-      <select id="pdfSource" class="px-4 py-2 border border-gray-400 rounded-lg bg-white text-black w-full">
-        <option value="local">Local PDF</option>
-        <option value="url" selected>URL PDF</option>
-      </select>
+    <!-- Quotes Section -->
+    <div class="panel-section">
+      <h3 class="panel-section-title">
+        <i class="fas fa-quote-left"></i>
+        QUOTES
+      </h3>
+      <div class="quotes-tools">
+        <button id="quotesToggleBtn" class="panel-button" title="Toggle Quotes">
+          <i class="fas fa-quote-left"></i>
+        </button>
+        <button id="exportQuotesBtn" class="panel-button" title="Export Quotes">
+          <i class="fas fa-download"></i>
+        </button>
+      </div>
+      <div class="quotes-input-container">
+        <input id="quoteInput" type="text" placeholder="Add new quote?" class="panel-input">
+        <button id="addQuoteBtn" class="panel-button add-quote-btn" title="Add Quote">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+      <div class="quotes-list" id="quoteList">
+        <!-- Quotes will be dynamically added here -->
+      </div>
     </div>
 
-    <!-- Input field for the PDF URL -->
-    <div id="urlInputField" class="flex justify-center mb-4">
-      <input id="pdfUrl" type="text" placeholder="Enter PDF URL" 
-            class="px-4 py-2 border border-gray-400 rounded-lg w-full bg-gray-800 text-gray-300 placeholder-gray-500">
-    </div>
-
-    <!-- Input field for the local PDF file -->
-    <div id="fileInputField" class="hidden flex justify-center mb-4">
-      <input id="pdfFile" type="file" accept="application/pdf" 
-            class="px-4 py-2 border border-gray-400 rounded-lg w-full">
-    </div>
-
-    <!-- YouTube Playlist input -->
-    <div class="flex justify-center mb-4">
-      <input id="youtubeUrl" type="text" placeholder="Enter YouTube Video or Playlist URL" 
-            class="px-4 py-2 border border-gray-400 rounded-lg w-full bg-gray-800 text-gray-300 placeholder-gray-500">
-    </div>
-
-    <!-- Button to load the PDF or YouTube playlist -->
-    <div class="flex justify-end">
-      <button id="loadPdfBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
-      rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Load PDF">
+    <!-- PDF Options Section -->
+    <div class="panel-section">
+      <h3 class="panel-section-title">
         <i class="fas fa-file-pdf"></i>
-      </button>
-      <button id="loadYoutubeBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F]
-      rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white" title="Load YouTube Playlist">
-        <i class="fab fa-youtube"></i>
-      </button>
+        PDF OPTIONS
+      </h3>
+      <div class="pdf-tools">
+        <div class="tool-group">
+          <label class="tool-label">YouTube Integration</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="youtubeToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="tool-group">
+          <label class="tool-label">Settings</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="settingsToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="tool-group">
+          <label class="tool-label">Direction</label>
+          <button id="toggleDirectionBtn" class="panel-button direction-btn" title="Toggle Direction">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+        </div>
+      </div>
+      <div class="pdf-inputs">
+        <select id="pdfSource" class="panel-select">
+          <option value="local">Local PDF</option>
+          <option value="url" selected>URL PDF</option>
+        </select>
+        <div id="urlInputField" class="input-field">
+          <input id="pdfUrl" type="text" placeholder="Enter PDF URL" class="panel-input">
+        </div>
+        <div id="fileInputField" class="input-field hidden">
+          <input id="pdfFile" type="file" accept="application/pdf" class="panel-input">
+        </div>
+        <div class="input-field">
+          <input id="youtubeUrl" type="text" placeholder="Enter YouTube Video or Playlist URL" class="panel-input">
+        </div>
+        <div class="load-buttons">
+          <button id="loadPdfBtn" class="panel-button load-btn" title="Load PDF">
+            <i class="fas fa-file-pdf"></i>
+          </button>
+          <button id="loadYoutubeBtn" class="panel-button load-btn" title="Load YouTube">
+            <i class="fab fa-youtube"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Media Section -->
+    <div class="panel-section">
+      <h3 class="panel-section-title">
+        <i class="fas fa-play"></i>
+        MEDIA
+      </h3>
+      <div class="media-controls">
+        <div class="media-player" id="mediaPlayer">
+          <iframe id="youtubePlayer" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="media-buttons">
+          <button id="closeMediaContainer" class="panel-button media-close-btn" title="Close Media Player">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="volume-control">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Container where the flipbook will be displayed -->
   <div id="flipbookContainer" class="h-screen w-full"></div>
-
-  <!-- Container for the YouTube player -->
-  <div id="mediaContainer" class="hidden">
-    <button id="closeMediaContainer" class="absolute top-2 right-2 text-white bg-red-500 rounded-full p-1" title="Close Media Player">
-      <i class="fas fa-times"></i>
-    </button>
-    <iframe id="youtubePlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
 
   <!-- Debugging Tool -->
   <!-- <div id="debugInfo" class="fixed bottom-20 left-4 z-50 bg-gray-800 p-2 rounded-lg border border-gray-600">
