@@ -152,21 +152,15 @@
         </div>
       </div>
       <div class="pdf-inputs">
-        <select id="pdfSource" class="panel-select">
-          <option value="local">Local PDF</option>
-          <option value="url" selected>URL PDF</option>
-        </select>
-        <div id="urlInputField" class="input-field">
-          <input id="pdfUrl" type="text" placeholder="Enter PDF URL" class="panel-input">
-          <button id="loadPdfBtn" class="panel-button load-btn" title="Load PDF">
-            <i class="fas fa-file-pdf"></i>
+        <div class="input-field">
+          <input id="pdfUrl" type="url" placeholder="Paste PDF URL here..." class="panel-input" autocomplete="off">
+          <button id="loadPdfUrlBtn" class="panel-button load-btn" title="Load PDF from URL">
+            <i class="fas fa-globe"></i>
           </button>
-        </div>
-        <div id="fileInputField" class="input-field hidden">
-          <input id="pdfFile" type="file" accept="application/pdf" class="panel-input">
-          <button id="loadPdfBtnAlt" class="panel-button load-btn" title="Load PDF">
-            <i class="fas fa-file-pdf"></i>
+          <button id="loadPdfFileBtn" class="panel-button load-btn" title="Load Local PDF">
+            <i class="fas fa-folder-open"></i>
           </button>
+          <input id="pdfFile" type="file" accept="application/pdf" style="display: none;">
         </div>
       </div>
     </div>
@@ -184,7 +178,7 @@
             <i class="fas fa-play"></i>
           </button>
           <button id="loadPlaylistBtn" class="panel-button load-btn" title="Load Playlist">
-            <i class="fas fa-list"></i>
+            <i class="fas fa-compact-disc"></i>
           </button>
         </div>
       </div>
