@@ -40,7 +40,77 @@
       <h2>🎛️ Control Panel</h2>
       <button id="closeUnifiedPanelBtn" class="panel-close">✕</button>
     </div>
-
+    
+    <!-- Settings Section -->
+    <div class="panel-section">
+      <h3 class="panel-section-title">
+        <i class="fas fa-cog"></i>
+        SETTINGS
+      </h3>
+      <div class="settings-group">
+        <div class="setting-item">
+          <label class="setting-label">Theme</label>
+          <select id="themeSelect" class="panel-select settings-dropdown">
+            <option value="default">Default (Blue)</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+            <option value="purple">Purple</option>
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+            <option value="cyan">Cyan</option>
+            <option value="indigo">Indigo</option>
+            <option value="yellow">Yellow</option>
+            <option value="gray">Gray</option>
+            <option value="emerald">Emerald</option>
+            <option value="teal">Teal</option>
+            <option value="violet">Violet</option>
+            <option value="rose">Rose</option>
+            <option value="amber">Amber</option>
+            <option value="lime">Lime</option>
+            <option value="sky">Sky</option>
+            <option value="fuchsia">Fuchsia</option>
+            <!-- Additional themes from ThemeManager.js -->
+            <option value="slate">Slate</option>
+            <option value="zinc">Zinc</option>
+            <option value="neutral">Neutral</option>
+            <option value="stone">Stone</option>
+            <option value="dracula">Dracula</option>
+            <option value="nord">Nord</option>
+            <option value="gruvbox">Gruvbox</option>
+            <option value="solarized">Solarized</option>
+            <option value="monokai">Monokai</option>
+            <option value="tomorrow">Tomorrow</option>
+            <option value="github">GitHub</option>
+            <option value="material">Material</option>
+            <option value="vscode">VS Code</option>
+            <option value="atom">Atom</option>
+            <option value="xcode">Xcode</option>
+            <option value="sublime">Sublime</option>
+            <option value="jetbrains">JetBrains</option>
+            <option value="notepad">Notepad</option>
+            <option value="terminal">Terminal</option>
+            <option value="matrix">Matrix</option>
+            <option value="cyberpunk">Cyberpunk</option>
+            <option value="ocean">Ocean</option>
+            <option value="forest">Forest</option>
+            <option value="sunset">Sunset</option>
+            <option value="midnight">Midnight</option>
+            <option value="cherry">Cherry</option>
+            <option value="lavender">Lavender</option>
+            <option value="mint">Mint</option>
+            <option value="coffee">Coffee</option>
+            <option value="neon">Neon</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+            <option value="platinum">Platinum</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
     <!-- Quotes Section -->
     <div class="panel-section">
       <h3 class="panel-section-title">
@@ -66,6 +136,7 @@
       </div>
     </div>
 
+
     <!-- PDF Options Section -->
     <div class="panel-section">
       <h3 class="panel-section-title">
@@ -77,13 +148,6 @@
           <label class="tool-label">YouTube Integration</label>
           <label class="toggle-switch">
             <input type="checkbox" id="youtubeToggle">
-            <span class="slider"></span>
-          </label>
-        </div>
-        <div class="tool-group">
-          <label class="tool-label">Settings</label>
-          <label class="toggle-switch">
-            <input type="checkbox" id="settingsToggle">
             <span class="slider"></span>
           </label>
         </div>

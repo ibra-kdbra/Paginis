@@ -376,36 +376,95 @@ input:checked + .slider:before {
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
 }
 
-/* Theme selector styling */
-.theme-selector {
-  display: none;
-  margin-top: 16px;
-  padding: 20px;
-  background: var(--bg-tertiary);
-  border-radius: 12px;
-  border: 1px solid var(--border-secondary);
-  backdrop-filter: blur(10px);
-}
-
-.theme-selector .tool-group {
+/* Settings Section Styling */
+.settings-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  border-bottom: none;
-  margin-bottom: 0;
+  cursor: pointer;
+  position: relative;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-secondary);
+  background: var(--bg-tertiary);
+  transition: all 0.3s ease;
+  border-radius: 0;
+  margin-bottom: 0 !important;
 }
 
-.theme-selector .tool-label {
+.settings-title:hover {
+  background: var(--bg-accent);
+}
+
+.settings-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.settings-toggle-btn:hover {
+  background: var(--bg-accent-hover);
+  color: var(--text-accent);
+  transform: scale(1.1);
+}
+
+.settings-toggle-btn i {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+.settings-title.collapsed .settings-toggle-btn i {
+  transform: rotate(-90deg);
+}
+
+.settings-content {
+  max-height: 500px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--bg-tertiary);
+  border-radius: 0 0 12px 12px;
+}
+
+.settings-content.collapsed {
+  max-height: 0;
+  padding: 0 20px;
+}
+
+.settings-group {
+  padding: 20px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-label {
   font-size: 14px;
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 0;
-  white-space: nowrap;
 }
 
-.theme-dropdown {
-  width: 160px;
+.settings-dropdown {
+  width: 140px;
   padding: 10px 14px;
   background: var(--bg-tertiary);
   border: 1px solid var(--border-primary);
@@ -421,21 +480,23 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
   background-size: 14px;
   padding-right: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.theme-dropdown:focus {
+.settings-dropdown:focus {
   outline: none;
   border-color: var(--text-accent);
   box-shadow: 0 0 0 3px var(--shadow-accent);
   background: var(--bg-accent);
 }
 
-.theme-dropdown:hover {
+.settings-dropdown:hover {
   border-color: var(--border-accent);
   background: var(--bg-accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.theme-dropdown option {
+.settings-dropdown option {
   background: var(--bg-secondary);
   color: var(--text-primary);
   padding: 8px;

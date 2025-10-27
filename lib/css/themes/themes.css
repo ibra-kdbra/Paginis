@@ -1276,18 +1276,3 @@
 .theme-applied {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-/* +++++++ REPLACE</diff>
-<task_progress>
-- [x] Document AI integration ideas in thoughts.md
-- [x] Update database schema for PDF-specific quotes
-- [x] Create PDF-specific quotes modal page
-- [x] Implement comprehensive theme system (40+ themes)
-- [ ] Move Load PDF button next to PDF URL input
-- [ ] Move Load YouTube button next to YouTube URL input
-- [ ] Apply blue theme globally to all elements
-- [ ] Implement conditional media player controls
-- [ ] Fix YouTube volume control with Player API
-- [ ] Create settings toggle functionality
-- [ ] Test and refine all implementations
-</task_progress>
-</replace_in_file> */
