@@ -60,6 +60,37 @@ button i {
   pointer-events: none;
 }
 
+/* Exception for modal buttons - allow clicks on icons */
+.modal-quote-actions .panel-button i,
+.modal-export-btn i,
+.panel-button.editQuoteBtn i,
+.panel-button.deleteQuoteBtn i,
+.modal-close i,
+#modalExportQuotesBtn i {
+  pointer-events: auto;
+}
+
+/* Ensure all modal buttons are clickable */
+.modal-quote-actions .panel-button,
+.modal-export-btn,
+.panel-button.editQuoteBtn,
+.panel-button.deleteQuoteBtn,
+.modal-close,
+#modalExportQuotesBtn {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* Fix modal button interactions */
+.modal-container .panel-button,
+.modal-content .panel-button,
+.modal-quote-item .panel-button {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  position: relative !important;
+  z-index: 1000002 !important;
+}
+
 /* Specific styling for quotes panel button */
 #toggleQuotePanelBtn i {
   font-size: 1.1rem;

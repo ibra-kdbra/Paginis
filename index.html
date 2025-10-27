@@ -101,17 +101,18 @@
         </select>
         <div id="urlInputField" class="input-field">
           <input id="pdfUrl" type="text" placeholder="Enter PDF URL" class="panel-input">
-        </div>
-        <div id="fileInputField" class="input-field hidden">
-          <input id="pdfFile" type="file" accept="application/pdf" class="panel-input">
-        </div>
-        <div class="input-field">
-          <input id="youtubeUrl" type="text" placeholder="Enter YouTube Video or Playlist URL" class="panel-input">
-        </div>
-        <div class="load-buttons">
           <button id="loadPdfBtn" class="panel-button load-btn" title="Load PDF">
             <i class="fas fa-file-pdf"></i>
           </button>
+        </div>
+        <div id="fileInputField" class="input-field hidden">
+          <input id="pdfFile" type="file" accept="application/pdf" class="panel-input">
+          <button id="loadPdfBtnAlt" class="panel-button load-btn" title="Load PDF">
+            <i class="fas fa-file-pdf"></i>
+          </button>
+        </div>
+        <div class="input-field">
+          <input id="youtubeUrl" type="text" placeholder="Enter YouTube Video or Playlist URL" class="panel-input">
           <button id="loadYoutubeBtn" class="panel-button load-btn" title="Load YouTube">
             <i class="fab fa-youtube"></i>
           </button>
@@ -145,6 +146,21 @@
   <!-- Container where the flipbook will be displayed -->
   <div id="flipbookContainer" class="h-screen w-full"></div>
 
+  <!-- PDF-Specific Quotes Modal -->
+  <div id="pdfSpecificQuotesModal" class="modal-container">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>📝 PDF Quotes</h2>
+        <button class="modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="modalQuoteList" class="modal-quote-list">
+          <!-- PDF-specific quotes will be displayed here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Debugging Tool -->
   <!-- <div id="debugInfo" class="fixed bottom-20 left-4 z-50 bg-gray-800 p-2 rounded-lg border border-gray-600">
     <strong>IndexedDB Page:</strong> <span id="storedPage">N/A</span>
@@ -157,6 +173,7 @@
   <script src="lib/js/ui.js"></script>
   <script src="lib/js/media.js"></script>
   <script type="module" src="lib/js/quotes/main.js"></script>
+  <script type="module" src="lib/js/themes/manager.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
