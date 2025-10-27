@@ -145,14 +145,7 @@
       </h3>
       <div class="pdf-tools">
         <div class="tool-group">
-          <label class="tool-label">YouTube Integration</label>
-          <label class="toggle-switch">
-            <input type="checkbox" id="youtubeToggle">
-            <span class="slider"></span>
-          </label>
-        </div>
-        <div class="tool-group">
-          <label class="tool-label">Direction</label>
+          <label class="tool-label">Reading Direction</label>
           <button id="toggleDirectionBtn" class="panel-button direction-btn" title="Toggle Direction">
             <i class="fas fa-exchange-alt"></i>
           </button>
@@ -175,23 +168,28 @@
             <i class="fas fa-file-pdf"></i>
           </button>
         </div>
-        <div class="input-field">
-          <input id="youtubeUrl" type="text" placeholder="Enter YouTube Video or Playlist URL" class="panel-input">
-          <button id="loadYoutubeBtn" class="panel-button load-btn" title="Load YouTube">
-            <i class="fab fa-youtube"></i>
-          </button>
-        </div>
       </div>
     </div>
 
     <!-- Media Section -->
     <div class="panel-section">
       <h3 class="panel-section-title">
-        <i class="fas fa-play"></i>
-        MEDIA
+        <i class="fab fa-youtube"></i>
+        YOUTUBE PLAYER
       </h3>
-      <div class="media-controls">
-        <div class="media-player" id="mediaPlayer">
+      <div class="youtube-input-container">
+        <div class="input-field">
+          <input id="youtubeUrl" type="url" placeholder="Paste YouTube URL here..." class="panel-input" autocomplete="off">
+          <button id="loadYoutubeBtn" class="panel-button load-btn" title="Play YouTube Video">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="loadPlaylistBtn" class="panel-button load-btn" title="Load Playlist">
+            <i class="fas fa-list"></i>
+          </button>
+        </div>
+      </div>
+      <div class="media-player-container">
+        <div class="media-player-youtube" id="youtubePlayerContainer">
           <iframe id="youtubePlayer" src="" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="media-buttons">
