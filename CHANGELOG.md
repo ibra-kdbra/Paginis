@@ -1,12 +1,14 @@
 # 📋 PAGINIS - PDF FLIPBOOK CHANGELOG
 
 ## 🎯 Recent Updates (Latest 3 commits)
-- `ed46d67` - removed debugging logs (recent)
-- `1a14229` - last touch for the icons (recent)
-- `bbdc7b7` - Issue #3, #7 are done (recent)
+- `b96dbe4` - button added (2025-10-29)
+- `82c07be` - main update (2025-10-29)
+- `5f0daa8` - code definite style (2025-10-29)
 
 ### ✨ Latest Change
-- Quotes Panel Icon: Fixed icon display issue - changed from non-existent `fa-quotes` to `fa-quote-left` (❝) for proper double quotes representation
+- Button Addition: New button functionality added to show the change log of the app
+- Main Update: Core application updates and improvements
+- Code Style Refinement: Consistent code formatting and style improvements
 
 ---
 
