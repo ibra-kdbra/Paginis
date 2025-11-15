@@ -1,1 +1,2 @@
-lib/js/ linguist-detectable=false
+# Exclude all libraries and dependencies from GitHub language detection
+lib/ linguist-detectable=false
