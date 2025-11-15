@@ -66,11 +66,11 @@
         <div class="flex flex-wrap justify-center gap-4">
           <div class="flex items-center space-x-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-lg">
             <i class="fas fa-calendar-alt text-blue-400"></i>
-            <span class="text-blue-300">Latest: October 29, 2025</span>
+            <span id="latestDate" class="text-blue-300">Loading...</span>
           </div>
           <div class="flex items-center space-x-2 px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-lg">
             <i class="fas fa-code-branch text-green-400"></i>
-            <span class="text-green-300">50+ Commits</span>
+            <span id="commitCount" class="text-green-300">Loading...</span>
           </div>
         </div>
       </div>
@@ -213,7 +213,7 @@
           <div class="space-y-2 text-sm text-gray-400">
             <div class="flex justify-between">
               <span>Total Commits:</span>
-              <span class="text-white font-medium">50+</span>
+              <span id="footerStatsCommits" class="text-white font-medium">Loading...</span>
             </div>
             <div class="flex justify-between">
               <span>Current Version:</span>
@@ -221,7 +221,7 @@
             </div>
             <div class="flex justify-between">
               <span>Last Updated:</span>
-              <span class="text-white font-medium">Oct 29, 2025</span>
+              <span id="footerStatsDate" class="text-white font-medium">Loading...</span>
             </div>
           </div>
         </div>
@@ -234,6 +234,6 @@
     </div>
   </footer>
 
-  <script src="lib/js/features/changelog/changelog.js"></script>
+  <script type="module" src="lib/js/features/changelog/changelog.js"></script>
 </body>
 </html>
