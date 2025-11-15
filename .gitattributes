@@ -1,2 +1,2 @@
-lib/js/core/* linguist-detectable=false
-lib/js/features/changelog/* linguist-detectable=false
+lib/js/core/ linguist-detectable=false
+lib/js/features/changelog/ linguist-detectable=false
