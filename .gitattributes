@@ -1,3 +1,5 @@
-lib/js/core/flipbook.js linguist-detectable=false
-lib/js/core/load.js linguist-detectable=false
-# lib/js/features/changelog/*.js linguist-detectable=false
+# Exclude core directory from GitHub language detection
+lib/js/core/ linguist-detectable=false
+
+# Exclude features/changelog directory from GitHub language detection
+lib/js/features/changelog/ linguist-detectable=false
