@@ -1,2 +1,3 @@
-lib/js/core/ linguist-detectable=false
-lib/js/features/changelog/ linguist-detectable=false
+lib/js/core/flipbook.js linguist-detectable=false
+lib/js/core/load.js linguist-detectable=false
+lib/js/features/changelog/*.js linguist-detectable=false
