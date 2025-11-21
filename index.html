@@ -50,7 +50,7 @@
       <h2>🎛️ Control Panel</h2>
       <button id="closeUnifiedPanelBtn" class="panel-close">✕</button>
     </div>
-    
+
     <!-- Settings Section -->
     <div class="panel-section">
       <h3 class="panel-section-title">
@@ -60,67 +60,76 @@
       <div class="settings-group">
         <div class="setting-item">
           <label class="setting-label">Theme</label>
-          <select id="themeSelect" class="panel-select settings-dropdown">
-            <option value="default">Default (Blue)</option>
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-            <option value="purple">Purple</option>
-            <option value="green">Green</option>
-            <option value="red">Red</option>
-            <option value="orange">Orange</option>
-            <option value="pink">Pink</option>
-            <option value="cyan">Cyan</option>
-            <option value="indigo">Indigo</option>
-            <option value="yellow">Yellow</option>
-            <option value="gray">Gray</option>
-            <option value="emerald">Emerald</option>
-            <option value="teal">Teal</option>
-            <option value="violet">Violet</option>
-            <option value="rose">Rose</option>
-            <option value="amber">Amber</option>
-            <option value="lime">Lime</option>
-            <option value="sky">Sky</option>
-            <option value="fuchsia">Fuchsia</option>
-            <!-- Additional themes from ThemeManager.js -->
-            <option value="slate">Slate</option>
-            <option value="zinc">Zinc</option>
-            <option value="neutral">Neutral</option>
-            <option value="stone">Stone</option>
-            <option value="dracula">Dracula</option>
-            <option value="nord">Nord</option>
-            <option value="gruvbox">Gruvbox</option>
-            <option value="solarized">Solarized</option>
-            <option value="monokai">Monokai</option>
-            <option value="tomorrow">Tomorrow</option>
-            <option value="github">GitHub</option>
-            <option value="material">Material</option>
-            <option value="vscode">VS Code</option>
-            <option value="atom">Atom</option>
-            <option value="xcode">Xcode</option>
-            <option value="sublime">Sublime</option>
-            <option value="jetbrains">JetBrains</option>
-            <option value="notepad">Notepad</option>
-            <option value="terminal">Terminal</option>
-            <option value="matrix">Matrix</option>
-            <option value="cyberpunk">Cyberpunk</option>
-            <option value="ocean">Ocean</option>
-            <option value="forest">Forest</option>
-            <option value="sunset">Sunset</option>
-            <option value="midnight">Midnight</option>
-            <option value="cherry">Cherry</option>
-            <option value="lavender">Lavender</option>
-            <option value="mint">Mint</option>
-            <option value="coffee">Coffee</option>
-            <option value="neon">Neon</option>
-            <option value="gold">Gold</option>
-            <option value="silver">Silver</option>
-            <option value="bronze">Bronze</option>
-            <option value="platinum">Platinum</option>
+          <select id="themeSelect" class="modern-theme-select">
+            <option value="">Select Theme...</option>
+            <!-- Core Themes -->
+            <optgroup label="Core">
+              <option value="default">🌟 Default</option>
+              <option value="dark">🖤 Dark</option>
+              <option value="light">☀️ Light</option>
+            </optgroup>
+            <!-- Color Themes -->
+            <optgroup label="Colors">
+              <option value="purple">💜 Purple</option>
+              <option value="green">💚 Green</option>
+              <option value="red">❤️ Red</option>
+              <option value="orange">🧡 Orange</option>
+              <option value="pink">💖 Pink</option>
+              <option value="cyan">💙 Cyan</option>
+              <option value="indigo">💜 Indigo</option>
+              <option value="yellow">💛 Yellow</option>
+              <option value="gray">⚫ Gray</option>
+              <option value="emerald">💚 Emerald</option>
+              <option value="teal">💎 Teal</option>
+              <option value="violet">💜 Violet</option>
+              <option value="rose">🌹 Rose</option>
+              <option value="amber">🟡 Amber</option>
+              <option value="lime">💚 Lime</option>
+              <option value="sky">💙 Sky</option>
+              <option value="fuchsia">💖 Fuchsia</option>
+              <option value="mint">🍃 Mint</option>
+              <option value="lavender">💜 Lavender</option>
+            </optgroup>
+            <!-- Community Themes -->
+            <optgroup label="Community">
+              <option value="dracula">🧛 Dracula</option>
+              <option value="nord">❄️ Nord</option>
+              <option value="gruvbox">🌲 Gruvbox</option>
+              <option value="solarized">☀️ Solarized</option>
+              <option value="monokai">🎨 Monokai</option>
+              <option value="tomorrow">🌟 Tomorrow</option>
+              <option value="github">🐙 GitHub</option>
+              <option value="material">🎯 Material</option>
+              <option value="vscode">🔵 VS Code</option>
+              <option value="atom">⚛️ Atom</option>
+              <option value="xcode">🍎 Xcode</option>
+              <option value="sublime">💎 Sublime</option>
+              <option value="jetbrains">🛠️ JetBrains</option>
+              <option value="notepad">📝 Notepad</option>
+              <option value="terminal">💻 Terminal</option>
+              <option value="matrix">🟢 Matrix</option>
+              <option value="cyberpunk">⚡ Cyberpunk</option>
+              <option value="ocean">🌊 Ocean</option>
+              <option value="forest">🌲 Forest</option>
+              <option value="sunset">🌅 Sunset</option>
+              <option value="midnight">🌙 Midnight</option>
+              <option value="cherry">🍒 Cherry</option>
+              <option value="coffee">☕ Coffee</option>
+              <option value="neon">🚨 Neon</option>
+              <option value="gold">🥇 Gold</option>
+              <option value="silver">🥈 Silver</option>
+              <option value="bronze">🥉 Bronze</option>
+              <option value="platinum">💎 Platinum</option>
+              <option value="slate">🔵 Slate</option>
+              <option value="zinc">⚪ Zinc</option>
+              <option value="neutral">⚫ Neutral</option>
+              <option value="stone">🪨 Stone</option>
+            </optgroup>
           </select>
         </div>
       </div>
     </div>
-    
+
     <!-- Quotes Section -->
     <div class="panel-section">
       <h3 class="panel-section-title">
@@ -227,8 +236,8 @@
     </div>
   </div>
 
-
   <script src="lib/js/libs/jquery.min.js" type="text/javascript"></script>
+  <script src="lib/js/utils/theme-utils.js" type="text/javascript"></script>
   <script src="lib/js/utils/validation.js" type="text/javascript"></script>
   <script src="lib/js/utils/browser-compatibility.js" type="text/javascript"></script>
   <script src="lib/js/utils/mobile-support.js" type="text/javascript"></script>
@@ -241,6 +250,7 @@
   <script src="lib/js/features/media/media.js"></script>
   <script type="module" src="lib/js/features/quotes/main.js"></script>
   <script type="module" src="lib/js/features/themes/manager.js"></script>
+  <script type="module" src="lib/js/features/themes/selector.js"></script>
   <script type="module" src="lib/js/features/changelog/changelog.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
