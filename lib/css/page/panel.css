@@ -308,9 +308,11 @@ input:checked + .slider:before {
   gap: 12px;
 }
 
-.panel-select {
+.panel-select,
+.modern-theme-select {
   padding: 12px 16px;
   background: rgba(45, 55, 72, 0.5);
+  border: 1px solid rgba(107, 114, 128, 0.3);
   border: 1px solid rgba(107, 114, 128, 0.3);
   border-radius: 10px;
   color: #e5e7eb;
@@ -318,11 +320,11 @@ input:checked + .slider:before {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
-.panel-select:focus {
+el-sect:focus,
+.modern-theme
+.panel-select:focus,
+.modern-theme-select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
   background: rgba(45, 55, 72, 0.7);
 }
 
