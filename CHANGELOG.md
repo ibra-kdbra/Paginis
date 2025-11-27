@@ -1,12 +1,26 @@
 # 📋 PAGINIS - PDF FLIPBOOK CHANGELOG
 
 
-## 🎯 Recent Updates (Latest 3 commits)
-- `f09bfc8` - Phase 1 architecture reorganization and migration (2025-11-15)
-- `30d4a26` - Major code structure refactoring and feature-based folders (2025-11-15)
-- `2eb60b7` - Dynamic version management system (2025-11-15)
+## 🎯 Recent Updates (Latest commits)
+- `81a2fd0` - Update local file size limits to 25MB with user feedback (2025-11-27)
+- `6ded15a` - Update theme dropdown styling to match panel design (2025-11-27)
+- `1cb5f22` - Code updates and refactoring preparation (2025-11-27)
+- `849ccf2` - General code refactoring and optimization (2025-11-27)
+- `28262bf` - Refactoring theme selection system (2025-11-27)
+- `d6ad418` - Refactoring theme utilities and selection logic (2025-11-27)
+- `8ad7cbc` - Phase 3 technical debt cleanup and optimization (2025-11-27)
+- `cd15c2f` - Phase 2 alert system improvements and UX fixes (2025-11-27)
+- `c7dddbe` - Foundation consolidation phase completed successfully (2025-11-27)
 
-### ✨ Latest Major Update - v4.1.3 Architecture Reorganization & Dynamic Versioning
+### ✨ Latest Major Update - v4.2.0 Theme System & Performance Optimization
+- **File Size Management**: Implemented 25MB limit for local PDF uploads with user feedback
+- **Theme Dropdown Enhancement**: Updated theme selector styling to match unified panel design
+- **Code Refactoring**: Comprehensive theme selection system refactoring and optimization
+- **Technical Debt Cleanup**: Phase 3 technical debt resolution and performance improvements
+- **Alert System Overhaul**: Phase 2 alert dialog modernization and UX enhancement
+- **Foundation Consolidation**: Phase 1 completion with robust architecture foundation
+
+### ✨ Previous Major Update - v4.1.3 Architecture Reorganization & Dynamic Versioning
 - **Code Architecture Reorganization**: Implemented feature-based folder structure with clean separation of concerns
 - **Dynamic Version Management**: Integrated automated version loading from CHANGELOG.md across all pages
 - **Script Optimization**: Consolidated and organized JavaScript modules for better maintainability
@@ -86,6 +100,14 @@
 ---
 
 ## 🔄 Version History
+
+### v4.2.0 - Theme System & Performance Optimization (2025-11-27)
+- File size management with 25MB local PDF upload limits
+- Theme dropdown styling updates to match panel design
+- Comprehensive theme selection system refactoring
+- Phase 3 technical debt cleanup and optimization
+- Phase 2 alert system improvements and UX enhancements
+- Foundation consolidation phase completion
 
 ### v4.1.3 - Architecture Reorganization & Dynamic Version Management (2025-11-15)
 - Code structure reorganization into feature-based folders
