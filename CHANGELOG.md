@@ -2,17 +2,23 @@
 
 
 ## 🎯 Recent Updates (Latest commits)
+- `6bbc39f` - only one index sript needed to load (2025-12-22)
+- `e46cd31` - updated the entry point (2025-12-22)
+- `19b6acc` - another mofication (2025-12-22)
+- `ae574e2` - simple modification (2025-12-22)
 - `81a2fd0` - Update local file size limits to 25MB with user feedback (2025-11-27)
 - `6ded15a` - Update theme dropdown styling to match panel design (2025-11-27)
 - `1cb5f22` - Code updates and refactoring preparation (2025-11-27)
 - `849ccf2` - General code refactoring and optimization (2025-11-27)
-- `28262bf` - Refactoring theme selection system (2025-11-27)
-- `d6ad418` - Refactoring theme utilities and selection logic (2025-11-27)
-- `8ad7cbc` - Phase 3 technical debt cleanup and optimization (2025-11-27)
-- `cd15c2f` - Phase 2 alert system improvements and UX fixes (2025-11-27)
-- `c7dddbe` - Foundation consolidation phase completed successfully (2025-11-27)
 
-### ✨ Latest Major Update - v4.2.0 Theme System & Performance Optimization
+### ✨ Latest Major Update - v4.3.0 Script Consolidation & UX Refinement
+- **Consolidated Entry Point**: Replaced multiple script tags in `index.html` with a single `app.js` entry point
+- **Dynamic Script Loading**: Implemented a promise-based sequential loader with cache-busting and error handling
+- **Quotes Modal Fixes**: Resolved race conditions and layering issues for the delete confirmation modal
+- **UI Logic Improvement**: Enhanced click-outside detection and added z-index prioritization for nested modals
+- **Technical Optimization**: Improved jQuery selector safety and resolved ES6 module absolute path issues
+
+### ✨ Previous Major Update - v4.2.0 Theme System & Performance Optimization
 - **File Size Management**: Implemented 25MB limit for local PDF uploads with user feedback
 - **Theme Dropdown Enhancement**: Updated theme selector styling to match unified panel design
 - **Code Refactoring**: Comprehensive theme selection system refactoring and optimization
@@ -100,6 +106,13 @@
 ---
 
 ## 🔄 Version History
+
+### v4.3.0 - Script Consolidation & UX Refinement (2025-12-22)
+- Implemented single entry point architecture using `lib/js/app.js`
+- Cleaned up `index.html` script loading logic
+- Fixed quotes delete confirmation modal z-index and timing issues
+- Added cache-busting to dynamic script loader
+- Enhanced security and validation for jQuery selectors
 
 ### v4.2.0 - Theme System & Performance Optimization (2025-11-27)
 - File size management with 25MB local PDF upload limits
