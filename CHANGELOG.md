@@ -2,14 +2,39 @@
 
 
 ## 🎯 Recent Updates (Latest commits)
-- `6bbc39f` - only one index sript needed to load (2025-12-22)
-- `e46cd31` - updated the entry point (2025-12-22)
-- `19b6acc` - another mofication (2025-12-22)
-- `ae574e2` - simple modification (2025-12-22)
+- `6b3a7d` - fix static default pdf url loading (2025-12-22)
+- `4151e32` - fixed the CORS problem finally (2025-12-22)
+- `8b0dbd4` - fixed a bug in toggle direction state (2025-12-22)
+- `2fd751a` - theme manager better layout, UI (2025-12-22)
+- `46c33fb` - updated the styling property (2025-12-22)
+- `0b6a3cb` - use select tag for modal (2025-12-22)
+- `509bb60` - update for the past month (2025-12-22)
+- `6bbc39f` - only one index script needed to load (2025-12-13)
+- `e46cd31` - updated the entry point (2025-12-13)
 - `81a2fd0` - Update local file size limits to 25MB with user feedback (2025-11-27)
 - `6ded15a` - Update theme dropdown styling to match panel design (2025-11-27)
 - `1cb5f22` - Code updates and refactoring preparation (2025-11-27)
 - `849ccf2` - General code refactoring and optimization (2025-11-27)
+
+### ✨ Latest Major Update - v4.4.0 Architecture Cleanup & Bug Fixes
+- **PDF Fallback System**: Enhanced fallback mechanism with proper loading state management and user notifications
+- **Constants Centralization**: Moved DEFAULT_PDF_URL to app-state.js for single source of truth
+- **Loading State Management**: Fixed stuck loading bars and improved UI state transitions
+- **CORS Issue Resolution**: Final fix for cross-origin PDF loading problems
+- **Direction Toggle Bug Fix**: Resolved RTL/LTR state synchronization issues
+- **Theme Manager UI**: Improved layout and styling consistency
+- **Modal Enhancement**: Updated modals to use proper select tags
+- **Monthly Updates**: Applied updates for the past month enhancements
+- **Script Loading Optimization**: Cleaned up redundant script loading in index.html
+- **Entry Point Refinement**: Updated application entry point for better modularity
+- **Styling Property Updates**: Enhanced CSS custom properties and styling system
+
+### ✨ Previous Major Update - v4.3.0 Script Consolidation & UX Refinement
+- **Consolidated Entry Point**: Replaced multiple script tags in `index.html` with a single `app.js` entry point
+- **Dynamic Script Loading**: Implemented a promise-based sequential loader with cache-busting and error handling
+- **Quotes Modal Fixes**: Resolved race conditions and layering issues for delete confirmation modal
+- **UI Logic Improvement**: Enhanced click-outside detection and added z-index prioritization for nested modals
+- **Technical Optimization**: Improved jQuery selector safety and resolved ES6 module absolute path issues
 
 ### ✨ Latest Major Update - v4.3.0 Script Consolidation & UX Refinement
 - **Consolidated Entry Point**: Replaced multiple script tags in `index.html` with a single `app.js` entry point
@@ -106,6 +131,18 @@
 ---
 
 ## 🔄 Version History
+
+### v4.4.0 - Architecture Cleanup & Bug Fixes (2025-12-22)
+- Enhanced PDF fallback system with proper loading state management and user notifications
+- Centralized DEFAULT_PDF_URL in app-state.js for single source of truth
+- Fixed stuck loading bars and improved UI state transitions
+- Resolved CORS issues for cross-origin PDF loading
+- Fixed RTL/LTR toggle state synchronization bugs
+- Improved theme manager layout and UI consistency
+- Updated modals to use proper select tags
+- Applied monthly updates and optimizations
+- Optimized script loading by removing redundant calls
+- Enhanced styling properties and CSS custom properties
 
 ### v4.3.0 - Script Consolidation & UX Refinement (2025-12-22)
 - Implemented single entry point architecture using `lib/js/app.js`
