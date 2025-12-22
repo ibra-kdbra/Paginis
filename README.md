@@ -3,6 +3,10 @@ A PDF flipbook website designed to make your life easier. It can take a PDF as i
 
 ![Sample](/assets/captured.png)
 
+## 📋 Changelog
+For a complete history of changes, features, and updates, please visit the changelog:
+**[View Changelog](https://paginis.vercel.app/changelog.html)**
+
 ## Tech Stack
 [![Tech Stack](https://skillicons.dev/icons?i=threejs,js,jquery,css,html,tailwindcss,svg)](https://skillicons.dev)
 
@@ -17,48 +21,69 @@ Check the pdf if using the link Make sure that cross-origin resource sharing is 
 <summary>Click to expand!</summary>
 This flipbook plugin is jQuery-based. Basically, you can copy the files in folder to your working directory. You don't need to include the lib folder..
 
-```git 
+```git
 └── 📁pdf-flipbook
     └── 📁assets
     └── 📁lib
         └── 📁css
             └── 📁page
-                └── button.css
-                └── input-panel-buttons.css
-                └── layout.css
-                └── panel.css
-                └── quotes.css
-            └── min.css
-            └── style.css
-            └── themify-icons.min.css
+            └── 📁themes
+                ├── themes.css
+            ├── min.css
+            ├── style.css
+            ├── themify-icons.min.css
         └── 📁fonts
-
         └── 📁images
             └── 📁pdfjs
-            └── 📁textures
-                └── white.jpg
-            └── loading.gif
+            ├── loading.gif
         └── 📁js
+            └── 📁core
+                └── 📁database
+                ├── flipbook.js
+                ├── load.js
+            └── 📁features
+                └── 📁changelog
+                    └── 📁services
+                        ├── ChangelogApiService.js
+                        ├── ChangelogParserService.js
+                    └── 📁ui
+                        ├── ChangelogRenderer.js
+                    └── 📁utils
+                        ├── ChangelogConfig.js
+                        ├── ChangelogUtils.js
+                    ├── changelog.js
+                └── 📁media
+                    ├── media.js
+                └── 📁quotes
+                    ├── db.js
+                    ├── main.js
+                    ├── ui.js
+                └── 📁search
+                └── 📁themes
+                    ├── manager.js
+                    ├── selector.js
             └── 📁libs
-                └── compatibility.js
-                └── jquery.min.js
-                └── mockup.min.js
-                └── pdf.min.js
-                └── pdf.worker.min.js
-                └── three.min.jsgit 
-            └── 📁quotes
-                └── db.js
-                └── main.js
-                └── ui.js
-            └── dflip.min.js
-            └── load.js
-            └── media.js
-            └── ui.js
+                └── 📁cmaps
+                ├── compatibility.js
+                ├── jquery.min.js
+                ├── mockup.min.js
+                ├── pdf.min.js
+                ├── pdf.worker.min.js
+                ├── three.min.js
+            └── 📁ui
+                ├── controls.js
+            └── 📁utils
+                ├── app-state.js
+                ├── browser-compatibility.js
+                ├── memory-manager.js
+                ├── mobile-support.js
+                ├── pageMemory.js
+                ├── performance-monitor.js
+                ├── service-worker.js
+                ├── theme-utils.js
+                ├── validation.js
+            ├── app.js
         └── 📁sound
-    └── .gitignore
-    └── index.html
-    └── LICENSE
-    └── README.md
 ```
 
 ## File Template
@@ -133,4 +158,4 @@ Create Flipbook through Button lightbox.
   _A smooth and customizable flipbook plugin, perfect for converting PDFs into interactive books._
 
 - **[JQuery_DFlip](https://www.icootoo.com/pdf/documentation.html)**  
-  _An extension of DFlip with support for jQuery, adding easy-to-use flipbook effects to your documents._ 
+  _An extension of DFlip with support for jQuery, adding easy-to-use flipbook effects to your documents._
