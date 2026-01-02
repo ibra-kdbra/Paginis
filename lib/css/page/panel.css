@@ -592,6 +592,49 @@ el-sect:focus,
   transform: scale(1.1);
 }
 
+/* Immersive Fullscreen */
+body.df-fullscreen-active .fixed,
+body.df-fullscreen-active #toggleUnifiedPanelBtn,
+body.df-fullscreen-active #unifiedPanel {
+  display: none !important;
+}
+
+/* Unified Flipbook UI Buttons */
+.df-ui-btn {
+  background: var(--bg-accent) !important;
+  border: 1px solid var(--border-accent) !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.df-ui-btn:hover {
+  background: var(--bg-accent-hover) !important;
+  border-color: var(--text-accent) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 15px var(--shadow-accent) !important;
+  color: var(--text-accent) !important;
+}
+
+.df-ui-btn.disabled {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  transform: none !important;
+}
+
+/* Flipbook Bottom Bar Adjustments */
+.df-ui-controls {
+  background: transparent !important;
+  padding: 10px !important;
+  gap: 8px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .panel-container {
@@ -609,6 +652,26 @@ el-sect:focus,
 
   .panel-input, .panel-select {
     font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Simplify Flipbook UI for mobile */
+  .df-ui-more,
+  .df-ui-share,
+  .df-ui-download,
+  .df-ui-sound,
+  .df-ui-start,
+  .df-ui-end,
+  .df-ui-pagemode {
+    display: none !important;
+  }
+
+  .df-ui-controls {
+    padding: 5px !important;
+  }
+
+  .df-ui-btn {
+    width: 36px !important;
+    height: 36px !important;
   }
 }
 
