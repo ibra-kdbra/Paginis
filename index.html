@@ -65,6 +65,17 @@
             <span>Select Theme...</span>
           </button>
         </div>
+        <div class="setting-item">
+          <label class="setting-label">Bottom Panel</label>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-gray-400">Auto-hide</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="bottomPanelAlwaysShown">
+              <span class="slider"></span>
+            </label>
+            <span class="text-xs text-gray-400">Fixed</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -158,8 +169,89 @@
     </div>
   </div>
 
+  <!-- Custom Flipbook Control Bar -->
+  <div class="hover-trigger" id="bottomHoverTrigger"></div>
+  <div id="customControlBar" class="always-shown">
+    <button class="custom-ui-btn" id="customPrevBtn" title="Previous Page">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="page-indicator">
+      <span id="customCurrentPage">1</span> / <span id="customTotalPages">1</span>
+    </div>
+
+    <button class="custom-ui-btn" id="customNextBtn" title="Next Page">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="h-8 w-px bg-gray-700 mx-2"></div>
+
+    <button class="custom-ui-btn" id="customOutlineBtn" title="Toggle Outline">
+      <i class="fas fa-list-ul"></i>
+    </button>
+
+    <button class="custom-ui-btn" id="customThumbnailBtn" title="Toggle Thumbnails">
+      <i class="fas fa-th-large"></i>
+    </button>
+
+    <div class="h-8 w-px bg-gray-700 mx-2 mobile-hide"></div>
+
+    <button class="custom-ui-btn mobile-hide" id="customZoomOutBtn" title="Zoom Out">
+      <i class="fas fa-search-minus"></i>
+    </button>
+
+    <button class="custom-ui-btn mobile-hide" id="customZoomInBtn" title="Zoom In">
+      <i class="fas fa-search-plus"></i>
+    </button>
+
+    <div class="h-8 w-px bg-gray-700 mx-2 mobile-hide"></div>
+
+    <button class="custom-ui-btn" id="customFullscreenBtn" title="Toggle Fullscreen">
+      <i class="fas fa-expand"></i>
+    </button>
+
+    <button class="custom-ui-btn mobile-hide" id="customShareBtn" title="Share">
+      <i class="fas fa-share-alt"></i>
+    </button>
+
+    <div class="relative">
+      <button class="custom-ui-btn" id="customMoreBtn" title="More Options">
+        <i class="fas fa-ellipsis-h"></i>
+      </button>
+
+      <!-- More Menu Dropdown -->
+      <div id="customMoreMenu" class="absolute bottom-full right-0 mb-4 w-56 bg-[#2D3748] border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible transform translate-y-2 transition-all duration-300 z-[1001]">
+        <div class="p-2 flex flex-col gap-1">
+          <button class="more-menu-item" id="menuDownloadBtn">
+            <i class="fas fa-download"></i>
+            <span>Download PDF</span>
+          </button>
+          <button class="more-menu-item" id="menuPageModeBtn">
+            <i class="fas fa-file-alt"></i>
+            <span>Single Page Mode</span>
+          </button>
+          <button class="more-menu-item" id="menuFirstPageBtn">
+            <i class="fas fa-angle-double-left"></i>
+            <span>Goto First Page</span>
+          </button>
+          <button class="more-menu-item" id="menuLastPageBtn">
+            <i class="fas fa-angle-double-right"></i>
+            <span>Goto Last Page</span>
+          </button>
+          <div class="h-px bg-gray-700 my-1"></div>
+          <button class="more-menu-item" id="menuSoundBtn">
+            <i class="fas fa-volume-up"></i>
+            <span>Sound: On</span>
+          </button>
+        </div>
+        <!-- Arrow -->
+        <div class="absolute -bottom-2 right-4 w-4 height-4 bg-[#2D3748] border-r border-b border-gray-700 transform rotate-45"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Container where the flipbook will be displayed -->
-  <div id="flipbookContainer" class="h-screen w-full"></div>
+  <div id="flipbookContainer" class="h-screen w-full relative"></div>
 
   <!-- PDF-Specific Quotes Modal -->
   <div id="pdfSpecificQuotesModal" class="modal-container">
