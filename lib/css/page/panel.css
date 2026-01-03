@@ -557,7 +557,7 @@ el-sect:focus,
   background: rgba(107, 114, 128, 0.3);
   border-radius: 2px;
   outline: none;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   cursor: pointer;
 }
 
@@ -599,40 +599,129 @@ body.df-fullscreen-active #unifiedPanel {
   display: none !important;
 }
 
-/* Unified Flipbook UI Buttons */
-.df-ui-btn {
-  background: var(--bg-accent) !important;
-  border: 1px solid var(--border-accent) !important;
-  color: var(--text-primary) !important;
-  border-radius: 8px !important;
-  transition: all 0.3s ease !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+/* Ensure Custom Control Bar stays visible in Fullscreen */
+#customControlBar {
+  z-index: 2147483647 !important; /* Maximum possible z-index */
 }
 
-.df-ui-btn:hover {
-  background: var(--bg-accent-hover) !important;
-  border-color: var(--text-accent) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 15px var(--shadow-accent) !important;
-  color: var(--text-accent) !important;
-}
-
-.df-ui-btn.disabled {
-  opacity: 0.5 !important;
+/* Hide Default Flipbook UI */
+.df-ui {
+  display: none !important;
+  opacity: 0 !important;
   pointer-events: none !important;
-  transform: none !important;
 }
 
-/* Flipbook Bottom Bar Adjustments */
-.df-ui-controls {
-  background: transparent !important;
-  padding: 10px !important;
-  gap: 8px !important;
-  display: flex !important;
-  justify-content: center !important;
+/* Custom Flipbook Control Bar */
+#customControlBar {
+  position: fixed; /* Changed to fixed to stay on top regardless of container changes */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background: var(--bg-secondary);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-primary);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-primary);
+  pointer-events: auto !important;
+  visibility: visible !important;
+  z-index: 2147483647 !important;
+}
+
+#customControlBar.visible,
+#customControlBar.always-shown {
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+.hover-trigger {
+  position: absolute; /* Relative to flipbookContainer */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Broad hover area */
+  height: 60px;
+  z-index: 999998;
+  pointer-events: auto !important;
+  background: transparent;
+}
+
+.custom-ui-btn {
+  background: var(--bg-accent);
+  border: 1px solid var(--border-accent);
+  color: var(--text-primary);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.custom-ui-btn:hover {
+  background: var(--bg-accent-hover);
+  border-color: var(--text-accent);
+  color: var(--text-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px var(--shadow-accent);
+}
+
+.custom-ui-btn:active {
+  transform: translateY(0);
+}
+
+.page-indicator {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+  min-width: 60px;
+  text-align: center;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  border: 1px solid var(--border-secondary);
+}
+
+.more-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: #E2E8F0;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.more-menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-accent);
+}
+
+.more-menu-item i {
+  width: 16px;
+  text-align: center;
+}
+
+#customMoreMenu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) translateY(0);
 }
 
 /* Responsive Design */
@@ -654,24 +743,28 @@ body.df-fullscreen-active #unifiedPanel {
     font-size: 16px; /* Prevents zoom on iOS */
   }
 
-  /* Simplify Flipbook UI for mobile */
-  .df-ui-more,
-  .df-ui-share,
-  .df-ui-download,
-  .df-ui-sound,
-  .df-ui-start,
-  .df-ui-end,
-  .df-ui-pagemode {
+  /* Custom Control Bar Mobile */
+  #customControlBar {
+    width: 95vw;
+    padding: 10px;
+    gap: 8px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .custom-ui-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .page-indicator {
+    font-size: 12px;
+    padding: 6px 8px;
+    min-width: 50px;
+  }
+
+  .mobile-hide {
     display: none !important;
-  }
-
-  .df-ui-controls {
-    padding: 5px !important;
-  }
-
-  .df-ui-btn {
-    width: 36px !important;
-    height: 36px !important;
   }
 }
 
