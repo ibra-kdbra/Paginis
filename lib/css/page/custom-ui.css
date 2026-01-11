@@ -1,0 +1,243 @@
+/* Share Popup Overhaul */
+.df-share-wrapper {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10000 !important;
+  position: absolute !important; /* Center over the book container */
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+.df-share-box {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-primary) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  width: 90% !important;
+  max-width: 300px !important; /* Smaller box */
+  box-shadow: var(--shadow-primary) !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  /* Reset min.css positioning to allow Flexbox centering */
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+.df-share-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 8px !important;
+}
+
+.df-share-title {
+  color: var(--text-primary) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
+.df-share-close {
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s;
+  padding: 5px;
+}
+
+.df-share-close:hover {
+  color: var(--text-error);
+}
+
+.df-share-url {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-secondary) !important;
+  border-radius: 8px !important;
+  color: var(--text-primary) !important;
+  padding: 12px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  width: 100% !important;
+  resize: none !important;
+  height: 60px !important;
+  box-sizing: border-box !important;
+}
+
+.df-share-button {
+  height: 44px !important;
+  line-height: 44px !important;
+  border-radius: 10px !important;
+  text-align: center !important;
+  font-size: 20px !important;
+  transition: all 0.3s ease !important;
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important; /* Square buttons */
+  flex: 0 0 auto !important;
+  background: var(--bg-accent) !important;
+  border: 1px solid var(--border-accent) !important;
+  color: var(--text-primary) !important;
+  cursor: pointer !important;
+}
+
+.df-share-buttons-container {
+  display: flex !important;
+  gap: 16px !important;
+  justify-content: center !important;
+  margin-bottom: 8px !important;
+}
+
+.df-share-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Side Panel Restyling (Thumbnails & Outline) */
+.df-sidemenu {
+  background: var(--bg-secondary) !important;
+  border-left: 1px solid var(--border-primary) !important;
+  box-shadow: var(--shadow-primary) !important;
+  top: 20px !important;
+  bottom: 80px !important;
+  height: auto !important;
+  border-radius: 12px 0 0 12px !important;
+  width: 260px !important;
+  z-index: 999 !important;
+}
+
+.df-thumb-container, .df-outline-container {
+  padding: 40px 10px 20px 10px !important; /* Added more top padding for close button */
+}
+
+.df-thumb-wrapper, .df-outline-wrapper {
+  background: transparent !important;
+}
+
+/* Outline/Bookmark Text Contrast */
+.df-outline-item {
+  color: #ffffff !important; /* High contrast white */
+  font-weight: 500 !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.df-outline-item:hover {
+  color: var(--text-accent) !important;
+  background: transparent !important;
+}
+
+/* Override min.css specific link hover style */
+.df-outline-item a:hover {
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.df-vrow {
+  margin-bottom: 12px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s ease !important;
+  background-size: contain !important; /* Respect aspect ratio */
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-color: var(--bg-tertiary) !important;
+}
+
+.df-vrow:hover {
+  border-color: var(--text-accent) !important;
+  transform: scale(1.02);
+}
+
+.df-vrow.df-selected {
+  border-color: var(--text-accent) !important;
+  box-shadow: 0 0 10px var(--shadow-accent) !important;
+}
+
+.df-vrow div {
+  background: rgba(0,0,0,0.7) !important; /* Higher contrast for thumb numbers */
+  color: white !important;
+  font-size: 11px !important;
+  padding: 2px 6px !important;
+  border-radius: 0 0 4px 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.df-ui-sidemenu-close {
+  top: 10px !important;
+  right: 10px !important;
+  background: var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 1001 !important;
+  transition: all 0.2s ease !important;
+}
+
+.df-ui-sidemenu-close:hover {
+  background: var(--bg-accent-hover) !important;
+  color: var(--text-error) !important;
+  transform: rotate(90deg);
+}
+
+/* Custom Page Indicator Input Styling */
+.page-input-custom {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  color: #fff;
+  width: 35px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  padding: 2px 0;
+  cursor: text;
+  pointer-events: auto;
+}
+
+.page-input-custom:focus {
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  border-color: #3b82f6; /* Accent color */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .df-ui-page {
+    display: flex !important;
+  }
+  
+  .df-sidemenu {
+    width: 220px !important;
+    top: 10px !important;
+    bottom: 70px !important;
+  }
+  
+  .df-thumb-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+}
