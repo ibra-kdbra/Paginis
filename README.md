@@ -1,22 +1,26 @@
 # Paginis
+
 A PDF flipbook website designed to make your life easier. It can take a PDF as input and generate a flipbook, whether it's a URL, local file, or a featured YouTube playlist to play while reading.
 
 ![Sample](/assets/captured.png)
 
 ## 📋 Changelog
+
 For a complete history of changes, features, and updates, please visit the changelog:
 **[View Changelog](https://paginis.vercel.app/changelog.html)**
 
 ## Tech Stack
-[![Tech Stack](https://skillicons.dev/icons?i=threejs,js,jquery,css,html,tailwindcss,svg)](https://skillicons.dev)
 
+[![Tech Stack](https://skillicons.dev/icons?i=threejs,js,jquery,css,html,tailwindcss,svg)](https://skillicons.dev)
 
 ## Issues
 
 ### Flipbook pages are not visible/defective in PDF
-Check the pdf if using the link Make sure that cross-origin resource sharing is enabled 
+
+Check the pdf if using the link Make sure that cross-origin resource sharing is enabled
 
 ## File Structure
+
 <details>
 <summary>Click to expand!</summary>
 This flipbook plugin is jQuery-based. Basically, you can copy the files in folder to your working directory. You don't need to include the lib folder..
@@ -87,9 +91,11 @@ This flipbook plugin is jQuery-based. Basically, you can copy the files in folde
 ```
 
 ## File Template
+
 And ensure the following files are included in the html.
 
 CSS:
+
 ```css
 <!-- Flipbook StyleSheet -->
 <link href="http://www.yoursite.com/dflip/css/dflip.css" rel="stylesheet" type="text/css">
@@ -97,6 +103,7 @@ CSS:
 <!-- Icons Stylesheet -->
 <link href="http://www.yoursite.com/dflip/css/themify-icons.css" rel="stylesheet" type="text/css">     
 ```
+
 JavaScript:
 
 Note: Include them just before </body> tag. Don't use them in head.
@@ -108,7 +115,9 @@ Note: Include them just before </body> tag. Don't use them in head.
 <!-- Flipbook main Js file -->
 <script src="http://www.yoursite.com/dflip/js/dflip.min.js" type="text/javascript"></script>     
 ```
+
 Basic HTML Template
+
 ```html
     <html>
     <head>
@@ -136,7 +145,9 @@ Basic HTML Template
     </body>
     </html>
 ```
+
 Create Flipbook through Button lightbox.
+
 ```html
 <div class="_df_button"
     source="http://www.yoursite.com/books/dflip manual.pdf"
@@ -144,6 +155,7 @@ Create Flipbook through Button lightbox.
     Button
 </div>
 ```
+
 </details>
 
 ### 🔗 Libraries & Tools
