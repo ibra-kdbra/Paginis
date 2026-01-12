@@ -7,14 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/assets/paginis.svg" alt="icon svg">
 
-  <link href="lib/css/min.css" rel="stylesheet" type="text/css">
-  <link href="lib/css/themify-icons.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="lib/css/style.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>window.dFlipLocation = "lib/";</script>
+  <!-- <script>window.dFlipLocation = "lib/";</script> -->
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -47,7 +45,10 @@
   <!-- Unified Right-Side Control Panel -->
   <div id="unifiedPanel" class="panel-container">
     <div class="panel-header">
-      <h2>🎛️ Control Panel</h2>
+      <h2 class="flex items-center gap-2">
+        <i class="fas fa-sliders-h text-blue-400"></i>
+        Control Panel
+      </h2>
       <button id="closeUnifiedPanelBtn" class="panel-close">✕</button>
     </div>
 
@@ -262,7 +263,10 @@
   <div id="pdfSpecificQuotesModal" class="modal-container">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>📝 PDF Quotes</h2>
+        <h2 class="flex items-center gap-2">
+          <i class="fas fa-edit text-yellow-400"></i>
+          PDF Quotes
+        </h2>
         <button class="modal-close">✕</button>
       </div>
       <div class="modal-body">
