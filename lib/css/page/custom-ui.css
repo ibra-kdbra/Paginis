@@ -126,6 +126,12 @@
   background: transparent !important;
 }
 
+/* Shorter thumbnails */
+.df-vrow {
+  height: 90px !important; 
+  margin-bottom: 4px !important;
+}
+
 /* Outline/Bookmark Text Contrast */
 .df-outline-item {
   color: #ffffff !important; /* High contrast white */
@@ -208,16 +214,18 @@
 .page-input-custom {
   background: var(--bg-accent) !important; /* Match button color */
   border: 1px solid var(--border-accent) !important;
-  border-radius: 8px !important;
+  border-radius: 10px !important;
   color: var(--text-primary) !important;
-  width: 45px; /* Slightly wider for 3-4 digits */
-  text-align: center;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  padding: 4px 0;
-  cursor: text;
-  pointer-events: auto;
-  transition: all 0.2s ease;
+  width: 45px !important; 
+  text-align: center !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', sans-serif !important;
+  padding: 4px 0 !important;
+  cursor: text !important;
+  pointer-events: auto !important;
+  transition: all 0.3s ease !important;
+  box-sizing: border-box !important;
+  margin-top: -2px !important; /* Better vertical alignment */
 }
 
 .page-input-custom:focus {
