@@ -114,7 +114,7 @@
   bottom: 80px !important;
   height: auto !important;
   border-radius: 12px 0 0 12px !important;
-  width: 260px !important;
+  width: 220px !important; /* Tighter sidebar width */
   z-index: 999 !important;
 }
 
@@ -126,10 +126,10 @@
   background: transparent !important;
 }
 
-/* Shorter thumbnails */
+/* Taller thumbnails */
 .df-vrow {
-  height: 90px !important; 
-  margin-bottom: 4px !important;
+  height: 140px !important; 
+  margin-bottom: 8px !important;
 }
 
 /* Outline/Bookmark Text Contrast */
@@ -156,7 +156,7 @@
 }
 
 .df-vrow {
-  margin-bottom: 8px !important; /* Shorter space */
+  /* margin-bottom is handled in the taller thumbnails block */
   border-radius: 8px !important;
   overflow: hidden !important;
   border: 2px solid transparent !important;
