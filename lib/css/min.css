@@ -144,16 +144,14 @@
     content: " ";
     background-image: url("../images/loading.gif");
     background-repeat: no-repeat;
-    background-size: 32px;
+    background-size: 64px; /* Increased from 32px */
     background-position: 50%
 }
 
 .df-container.df-loading:before {
-    background-color: white;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    border: 1px solid rgba(150, 150, 150, 0.2)
+    /* Removed background-color and border to show only the flipping book GIF */
+    background-color: transparent;
+    border: none;
 }
 
 .df-book-stage {
@@ -1107,11 +1105,8 @@ section.linkAnnotation a .annotationLayer>a {
 }
 
 .df-page-loading:before {
-    background-color: white;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    box-sizing: border-box
+    /* Removed background-color to show only the flipping book GIF */
+    background-color: transparent;
 }
 
 .df-page-loading:after {
@@ -1136,11 +1131,11 @@ section.linkAnnotation a .annotationLayer>a {
 .df-thumb-container .df-vrow:before {
     content: "";
     background-image: url("../images/loading.gif");
-    background-size: 22px;
-    height: 22px;
-    width: 22px;
+    background-size: 44px; /* Increased from 22px */
+    height: 44px;
+    width: 44px;
     display: block;
-    top: 60px;
+    top: 40px; /* Adjusted for larger size */
     margin: 0 auto;
     position: relative;
     z-index: 0

@@ -2,114 +2,59 @@
 
 ## 🎯 Recent Updates (Latest commits)
 
-- `06b5bc3` - fix the persistent theme when loading (2026-01-03)
-- `bdbf33c` - better modify (2026-01-03)
-- `e1c99a2` - last update for the new UI (2026-01-03)
-- `2afe61a` - removed static style (2026-01-03)
-- `1524d88` - removed static style (2026-01-03)
-- `9b0bb87` - removed static style (2026-01-03)
-- `0e72b94` - import js file (2026-01-03)
-- `6511b2e` - controls inside the bottom panel (2026-01-03)
-- `1d6aceb` - panel add style (2026-01-03)
-- `c4d528d` - one line modify (2026-01-03)
-- `3612ff4` - update the panel (2026-01-03)
-- `398f21b` - update the style for the bottom, it will be changed thoroughly (2026-01-02)
-- `adeefd7` - updated the view (2026-01-02)
-- `3f37e15` - new version modification (2025-12-23)
-- `51db98b` - changelog file (2025-12-22)
-- `66b3a7d` - fix static default pdf url loading (2025-12-22)
+- `130e86b` - loading gif change (2026-01-12)
+- `b4332cd` - no need it for load inside the index main (2026-01-12)
+- `8422982` - added the stats section here instead of the main HTML page (2026-01-12)
+- `0ec6953` - import themify-icons, min from here (2026-01-12)
+- `e40fea1` - HTML icons changing, stylesheet fix (2026-01-12)
+- `fdd01b5` - longer thumbnail, tighter width (2026-01-12)
+- `409d80e` - refactore, modernized the flipbook's zoom and scroll handling (2026-01-12)
+- `a914ab6` - scroll thumbnail up, down is conflicting with zoom in - out, fixed (2026-01-12)
+- `d01337b` - fix: rendering/loading problem resolved with applying optimization (2026-01-11)
+- `7a4b32c` - core refactoring at it's best (2026-01-11)
 
-### ✨ Latest Major Update - v4.5.0 UI Modernization & Architecture Refinement
+### ✨ Latest Major Update - v5.0.0 Core Modernization & UI Enhancement (2026-01-12)
 
-- **UI Overhaul & Modernization**: Entirely replaced the legacy brown-orange ("middle ages") color scheme with a dynamic, theme-aware system.
-- **Enhanced Theme System**: Implemented dynamic CSS variables for all core UI elements, including the GitHub link, control panel toggle, and version indicators.
-- **Bottom Panel Integration**: Migrated flipbook controls directly into the bottom panel for a more streamlined, unified user experience.
-- **Unified Control Panel**: Major redesign of the right-side control panel with improved sectioning and modern styling.
-- **Robust Persistence**: Fixed theme and PDF state management to ensure user preferences are correctly preserved across page reloads.
-- **Code Cleanliness**: Removed significant technical debt by eliminating hardcoded hex colors and migrating to modular CSS custom properties.
-- **View Layer Optimization**: Updated various view components for better responsiveness and visual consistency.
+- **Library Modularization**: Completely refactored the DFlip core library into a modular ES6 structure, enabling easier bug fixing and feature development.
+- **Critical Scroll Fix**: Resolved a major conflict where scrolling through the thumbnail or bookmark lists would accidentally trigger the flipbook's zoom or page-turn logic.
+- **UI & Icon Modernization**: Replaced all legacy emojis with a cohesive set of colored Font Awesome icons for a professional, consistent look.
+- **Theme System Overhaul**: Implemented universal theme toggling that works across the entire project structure, ensuring visual consistency in all modes.
+- **Control Panel Redesign**: Major restyling of the right-side control panel and quotes module for better UX and modern aesthetics.
+- **Bottom Panel Enhancement**: Applied a new theme and integrated advanced controls into the bottom bar, including the new page number entry system.
+- **Style Refactoring**: Eliminated technical debt by removing absolute paths and consolidated persistent styles into a central, modular entry point.
+- **Performance Analytics**: Integrated a real-time dashboard into the changelog, providing live metrics and optimization suggestions.
+- **Code Cleanup**: Removed legacy unused code and deprecated event listeners to streamline the application skeleton.
 
-### ✨ Previous Major Update - v4.4.0 Architecture Cleanup & Bug Fixes
+### ✨ Previous Major Update - v4.5.0 UI Modernization & Architecture Refinement (2026-01-03)
 
-- **PDF Fallback System**: Enhanced fallback mechanism with proper loading state management and user notifications
-- **Constants Centralization**: Moved DEFAULT_PDF_URL to app-state.js for single source of truth
-- **Loading State Management**: Fixed stuck loading bars and improved UI state transitions
-- **CORS Issue Resolution**: Final fix for cross-origin PDF loading problems
-- **Direction Toggle Bug Fix**: Resolved RTL/LTR state synchronization issues
-- **Theme Manager UI**: Improved layout and styling consistency
-- **Modal Enhancement**: Updated modals to use proper select tags
-- **Monthly Updates**: Applied updates for the past month enhancements
-- **Script Loading Optimization**: Cleaned up redundant script loading in index.html
-- **Entry Point Refinement**: Updated application entry point for better modularity
-- **Styling Property Updates**: Enhanced CSS custom properties and styling system
-
-### ✨ Previous Major Update - v4.3.0 Script Consolidation & UX Refinement
-
-- **Consolidated Entry Point**: Replaced multiple script tags in `index.html` with a single `app.js` entry point
-- **Dynamic Script Loading**: Implemented a promise-based sequential loader with cache-busting and error handling
-- **Quotes Modal Fixes**: Resolved race conditions and layering issues for delete confirmation modal
-- **UI Logic Improvement**: Enhanced click-outside detection and added z-index prioritization for nested modals
-- **Technical Optimization**: Improved jQuery selector safety and resolved ES6 module absolute path issues
-
-### ✨ Previous Major Update - v4.2.0 Theme System & Performance Optimization
-
-- **File Size Management**: Implemented 25MB limit for local PDF uploads with user feedback
-- **Theme Dropdown Enhancement**: Updated theme selector styling to match unified panel design
-- **Code Refactoring**: Comprehensive theme selection system refactoring and optimization
-- **Technical Debt Cleanup**: Phase 3 technical debt resolution and performance improvements
-- **Alert System Overhaul**: Phase 2 alert dialog modernization and UX enhancement
-- **Foundation Consolidation**: Phase 1 completion with robust architecture foundation
-
-### ✨ Previous Major Update - v4.1.3 Architecture Reorganization & Dynamic Versioning
-
-- **Code Architecture Reorganization**: Implemented feature-based folder structure with clean separation of concerns
-- **Dynamic Version Management**: Integrated automated version loading from CHANGELOG.md across all pages
-- **Script Optimization**: Consolidated and organized JavaScript modules for better maintainability
-- **Path Updates**: Streamlined asset paths and resource loading for improved performance
+- **UI Overhaul & Modernization**: Replaced legacy color schemes with a dynamic, theme-aware system.
+- **Bottom Panel Integration**: Migrated flipbook controls directly into the bottom panel for a unified experience.
+- **Robust Persistence**: Fixed theme and PDF state management to ensure preferences are preserved across reloads.
+- **Technical Debt Removal**: Eliminated hardcoded hex colors in favor of modular CSS custom properties.
 
 ---
 
 ## 🚀 Major Features & Improvements
 
-### 🔒 Security & Input Validation Overhaul (Phase 1)
+### ⚡ Performance & Analytics
 
-- **Input Sanitization**: Comprehensive XSS prevention and input cleaning
-- **URL Validation**: Strict URL format validation with protocol enforcement
-- **PDF File Validation**: MIME type checking, file size limits (50MB), and extension validation
-- **Error Handling**: Replaced generic alerts with user-friendly toast notifications
+- **Live Monitoring**: Real-time tracking of memory usage and rendering performance via `PerformanceMonitor`.
+- **Optimization Layer**: Automatic application of rendering optimizations for smoother flip transitions.
+- **Core Refactoring**: Complete modernization of the DFlip core into ES6 modules for improved reliability.
+- **Standardized Events**: Modern `wheel` event implementation for conflict-free sidebar scrolling.
 
-### 🏗️ Architecture & State Management Refactor (Phase 2)
+### 📱 Mobile & UX Experience
 
-- **Centralized State Management**: Replaced global variables with event-driven AppState system
-- **Memory Management**: Automatic resource cleanup for PDFs and YouTube players
-- **Performance Monitoring**: Real-time memory usage tracking and performance metrics
-- **Browser Compatibility**: Feature detection and graceful degradation
+- **Touch Gesture Support**: Optimized swipe navigation for tablets and smartphones.
+- **Smart Sidebars**: Hover-aware sidebars that prevent accidental interactions while providing quick access.
+- **Custom Loaders**: Themed "flipping book" loading indicators for a branded experience.
+- **Haptic Feedback**: Vibration support for mobile navigation events.
 
-### 📱 Mobile & UX Experience Enhancement (Phase 3)
+### ✨ Icon & Theme System
 
-- **Touch Gesture Support**: Swipe left/right for page navigation on mobile devices
-- **Mobile Optimizations**: Responsive panel sizing and touch-friendly interactions
-- **Loading Indicators**: Visual feedback for all async operations with spinner animations
-- **Haptic Feedback**: Vibration support for mobile navigation
-
-### ✨ Icon System & UI Enhancement
-
-- Button Icon Conversion: All buttons converted to Font Awesome icons with hover tooltips
-- GitHub Link: Converted to icon-only design with proper styling
-- Panel Resizing: Quotes and options panels optimized to medium sizes
-
-### 💬 Quotes System
-
-- Complete Quotes Module: Add, edit, delete, and export functionality
-- IndexedDB Integration: Persistent quote storage with CRUD operations
-- Dynamic UI: Real-time quote list updates with edit/delete buttons
-
-### 📄 PDF & Media Features
-
-- RTL/LTR Toggle: Direction switching without page reload
-- YouTube Integration: Support for videos and playlists
-- PDF Loading: URL and local file support with page memory
-- Share Functionality: Clean URL format with `?pdf=` and `?page=` parameters
+- **Icon Conversion**: Full migration from emojis to colored Font Awesome icon sets for all controls and headers.
+- **Dynamic Variables**: Comprehensive CSS custom property system for effortless theme switching.
+- **Relative Pathing**: Robust asset loading compatible with any deployment environment (local or server).
 
 ---
 
@@ -117,22 +62,16 @@
 
 ### 🛡️ Security & Architecture
 
-- **Input Validation Framework**: Comprehensive validation utilities for all user inputs
-- **State Management System**: Event-driven AppState class replacing global variables
-- **Browser Compatibility Layer**: Feature detection and progressive enhancement
-- **File Security**: MIME type validation, size limits, and malicious file detection
+- **Input Validation Framework**: Comprehensive sanitization for all URLs and file uploads.
+- **State Management System**: Centralized, event-driven `AppState` class replacing global variables.
+- **Modular Refactoring**: Clean separation of concerns with feature-based folder organization.
+- **Browser Compatibility**: Robust feature detection and graceful degradation across all modules.
 
-### ⚡ Performance & Optimization
+### ⚡ Performance Optimization
 
-- **Memory Management**: Automatic resource cleanup for PDFs and YouTube players
-- **Library Integration**: jQuery, Three.js, PDF.js, DFlip integration optimized
-- **Cross-browser Support**: Compatibility fixes and optimizations
-
-### 📁 Code Organization & Assets
-
-- **Modular Structure**: Separated concerns into distinct JavaScript modules
-- **CSS Organization**: Maintainable stylesheet structure with custom properties
-- **JavaScript Modules**: ES6 imports and organized functionality
+- **Memory Management**: Automatic resource cleanup for heavy PDF and YouTube instances.
+- **Rendering Efficiency**: Applied Three.js and DFlip optimizations to fix rendering/loading stalls.
+- **Script Loading**: Sequentially loaded dynamic scripts with cache-busting and error handling.
 
 ---
 
@@ -140,94 +79,52 @@
 
 ### ✅ Critical Bug Fixes
 
-- **Issue #6**: Completed resolution of critical rendering bug
-- **Issue #2**: RTL/LTR functionality fully implemented and tested
-- **Issue #1**: Initial feature implementation completed successfully
-
-### 🧹 Code Cleanup & Optimization
-
-- **Comment Removal**: Cleaned up development comments and obsolete code
-- **File Restructuring**: Better organization and naming conventions
-- **Style Optimization**: Consolidated CSS with improved performance
+- **Zoom Conflict**: Fixed major issue where scrolling thumbnail/bookmark lists triggered book zooming.
+- **CORS Issues**: Finalized resolution for cross-origin PDF loading across different environments.
+- **Persistence Bugs**: Fixed theme and PDF state loss during page transitions.
+- **Synchronization**: Resolved RTL/LTR toggle state desync issues.
+- **Modal Layering**: Fixed z-index and race conditions for nested modal displays.
 
 ---
 
 ## 🔄 Version History
 
-### v4.5.0 - UI Modernization & Architecture Refinement (2026-01-03)
+### v5.0.0 - Core Modernization (2026-01-12)
 
-- Entirely replaced the legacy brown-orange ("middle ages") color scheme with a dynamic, theme-aware system
-- Implemented flipbook controls directly into the bottom panel for a streamlined experience
-- Major redesign of the right-side control panel with modern styling
-- Refined state management for robust theme and PDF persistence across reloads
-- Migrated legacy CSS hex colors to modular CSS custom properties
+- Modularized DFlip core for better maintainability
+- Fixed scroll conflicts in sidebars
+- Restyled control panel and bottom bar
+- Implemented universal theme toggling
+- Modernized all icons to Font Awesome
+- Added performance analytics dashboard
 
-### v4.4.0 - Architecture Cleanup & Bug Fixes (2025-12-22)
+### v4.5.0 - UI Modernization (2026-01-03)
 
-- Enhanced PDF fallback system with proper loading state management and user notifications
-- Centralized DEFAULT_PDF_URL in app-state.js for single source of truth
-- Fixed stuck loading bars and improved UI state transitions
-- Resolved CORS issues for cross-origin PDF loading
-- Fixed RTL/LTR toggle state synchronization bugs
-- Improved theme manager layout and UI consistency
-- Updated modals to use proper select tags
-- Applied monthly updates and optimizations
-- Optimized script loading by removing redundant calls
-- Enhanced styling properties and CSS custom properties
+- Replaced legacy color scheme with theme-aware system
+- Integrated controls into bottom panel
+- Fixed theme persistence bugs
 
-### v4.3.0 - Script Consolidation & UX Refinement (2025-12-22)
+### v4.4.0 - Architecture Cleanup (2025-12-22)
 
-- Implemented single entry point architecture using `lib/js/app.js`
-- Cleaned up `index.html` script loading logic
-- Fixed quotes delete confirmation modal z-index and timing issues
-- Added cache-busting to dynamic script loader
-- Enhanced security and validation for jQuery selectors
+- Enhanced PDF fallback system
+- Centralized configuration in `app-state.js`
+- Fixed RTL/LTR toggle synchronization
 
-### v4.2.0 - Theme System & Performance Optimization (2025-11-27)
+### v4.0.0 - Major Overhaul (2025-11-01)
 
-- File size management with 25MB local PDF upload limits
-- Theme dropdown styling updates to match panel design
-- Comprehensive theme selection system refactoring
-- Phase 3 technical debt cleanup and optimization
-- Phase 2 alert system improvements and UX enhancements
-- Foundation consolidation phase completion
-
-### v4.1.3 - Architecture Reorganization & Dynamic Version Management (2025-11-15)
-
-- Code structure reorganization into feature-based folders
-- Dynamic version loading from CHANGELOG.md
-- Script optimization and module consolidation
-
-### v4.0.0 - Major Security & Architecture Overhaul (2025-11-01)
-
-- Phase 1: Security hardening with input validation and error handling
-- Phase 2: Architecture refactor with state management and memory optimization
-- Phase 3: UX enhancement with mobile support and haptic feedback
-
-### v3.0.0 (2025-10-29)
-
-- Complete icon system implementation
-- Panel size optimization
-- Enhanced edit functionality
-
-### v2.0.0 (2024-11-14)
-
-- Quotes system implementation
-- RTL/LTR toggle feature
-- YouTube integration
+- Security hardening and input validation
+- UX enhancement and mobile support
 
 ### v1.0.0 (2024-10-24)
 
-- Basic PDF flipbook functionality
-- Initial UI design
-- Core library integration
+- Initial release with basic flipbook and core integration
 
 ---
 
 ## 📝 Notes
 
-- Changes are tracked and documented
-- Code quality maintained through refactoring
-- User experience prioritized in all updates
+- All changes since January 2026 are included in the v5.0.0 milestone.
+- The project now follows a more modular, feature-oriented architecture.
+- Core library dependencies have been optimized for better rendering performance.
 
 ---

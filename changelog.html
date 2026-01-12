@@ -5,15 +5,16 @@
   <meta charset="utf-8">
   <title>Changelog - Paginis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="/assets/paginis.svg" alt="icon svg">
-
+  <link rel="icon" type="image/svg+xml" href="/assets/changelog.svg" alt="icon svg">
+<!-- 
   <link href="lib/css/min.css" rel="stylesheet" type="text/css">
-  <link href="lib/css/themify-icons.min.css" rel="stylesheet" type="text/css">
+  <link href="lib/css/themify-icons.min.css" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="lib/css/page/changelog.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="lib/js/features/changelog/performance-monitor.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </head>
@@ -161,6 +162,22 @@
       </div>
     </section>
 
+    <!-- Performance Analytics -->
+    <section id="performance" class="animate-slide-up">
+      <div class="flex items-center space-x-3 mb-8">
+        <div class="p-3 bg-blue-600/20 rounded-lg">
+          <i class="fas fa-chart-line text-blue-400 text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-white">Performance Analytics</h2>
+          <p class="text-gray-400">Real-time session performance metrics</p>
+        </div>
+      </div>
+      <div id="performanceStats" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+        <!-- Performance stats will be populated here -->
+      </div>
+    </section>
+
     <!-- Version History -->
     <section id="versions" class="animate-slide-up">
       <div class="flex items-center space-x-3 mb-8">
@@ -173,8 +190,10 @@
         </div>
       </div>
 
-      <div id="versionTimeline" class="space-y-8">
-        <!-- Version timeline will be populated here -->
+      <div class="timeline-container">
+        <div id="versionTimeline" class="space-y-8">
+          <!-- Version timeline will be populated here -->
+        </div>
       </div>
     </section>
 
