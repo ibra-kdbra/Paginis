@@ -144,10 +144,24 @@
     <!-- Media Section -->
     <div class="panel-section">
       <h3 class="panel-section-title">
-        <i class="fab fa-youtube"></i>
-        YOUTUBE PLAYER
+        <i class="fas fa-play-circle"></i>
+        MEDIA PLAYER
       </h3>
-      <div class="youtube-input-container">
+
+      <!-- Media Mode Switcher -->
+      <div class="flex bg-gray-800/50 p-1 rounded-lg mb-4 border border-gray-700">
+        <button id="switchYoutubeMode" class="flex-1 flex items-center justify-center gap-2 py-1.5 rounded-md transition-all duration-300 bg-blue-500 text-white shadow-lg">
+          <i class="fab fa-youtube"></i>
+          <span class="text-xs font-medium">YouTube</span>
+        </button>
+        <button id="switchAudioMode" class="flex-1 flex items-center justify-center gap-2 py-1.5 rounded-md transition-all duration-300 text-gray-400 hover:text-white">
+          <i class="fas fa-music"></i>
+          <span class="text-xs font-medium">Audio</span>
+        </button>
+      </div>
+
+      <!-- YouTube Input Group -->
+      <div id="youtubeInputGroup" class="youtube-input-container">
         <div class="input-field">
           <input id="youtubeUrl" type="url" placeholder="Paste YouTube URL here..." class="panel-input" autocomplete="off">
           <button id="loadYoutubeBtn" class="panel-button load-btn" title="Play YouTube Video">
@@ -158,10 +172,41 @@
           </button>
         </div>
       </div>
-      <div class="media-player-container">
+
+      <!-- Local Audio Input Group (Hidden by default) -->
+      <div id="audioInputGroup" class="local-audio-container hidden">
+        <div class="input-field">
+          <input id="localAudioFile" type="file" accept="audio/*" style="display: none;">
+          <label for="localAudioFile" class="panel-button w-full text-center cursor-pointer flex items-center justify-center gap-2 bg-[var(--bg-tertiary)] hover:bg-[var(--bg-accent-hover)] transition-colors py-2 rounded group">
+            <i class="fas fa-cloud-upload-alt text-blue-400 group-hover:scale-110 transition-transform"></i>
+            <span>Import Local File</span>
+          </label>
+        </div>
+        <div id="localAudioFileName" class="text-[10px] text-gray-500 mt-1 truncate hidden text-center italic"></div>
+      </div>
+
+      <div class="media-player-container mt-2">
         <div class="media-player-youtube" id="youtubePlayerContainer">
           <iframe id="youtubePlayer" src="" frameborder="0" allowfullscreen></iframe>
         </div>
+        
+        <!-- Custom Local Audio Player UI -->
+        <div id="customAudioPlayer" class="hidden flex flex-col gap-2 mt-4 p-3 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-blue-500/30 transition-colors">
+          <div class="flex items-center gap-3">
+            <button id="audioPlayPauseBtn" class="w-8 h-8 flex items-center justify-center bg-blue-500 hover:bg-blue-600 rounded-full transition-colors">
+              <i class="fas fa-play text-xs text-white"></i>
+            </button>
+            <div class="flex-1 flex flex-col">
+              <input type="range" id="audioProgressSlider" min="0" max="100" value="0" class="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-blue-500">
+              <div class="flex justify-between mt-1">
+                <span id="audioCurrentTime" class="text-[10px] text-gray-400 font-mono">0:00</span>
+                <span id="audioTotalTime" class="text-[10px] text-gray-400 font-mono">0:00</span>
+              </div>
+            </div>
+          </div>
+          <audio id="localAudioPlayer" class="hidden"></audio>
+        </div>
+
         <div class="media-buttons">
           <button id="closeMediaContainer" class="panel-button media-close-btn" title="Close Media Player">
             <i class="fas fa-times"></i>
