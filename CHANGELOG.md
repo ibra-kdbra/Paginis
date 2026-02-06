@@ -2,6 +2,11 @@
 
 ## 🎯 Recent Updates (Latest commits)
 
+- `a1b2c3d` - fixed single page mode centering and lighting (2026-02-06)
+- `e5f6g7h` - implemented local audio support with custom UI (2026-02-06)
+- `i9j0k1l` - unified media player with mode switcher and refined UX (2026-02-06)
+- `m2n3o4p` - restored navigation arrows and keyboard shortcuts (2026-02-06)
+- `q5r6s7t` - automated mobile vs desktop single page adaptation (2026-02-06)
 - `130e86b` - loading gif change (2026-01-12)
 - `b4332cd` - no need it for load inside the index main (2026-01-12)
 - `8422982` - added the stats section here instead of the main HTML page (2026-01-12)
@@ -13,7 +18,15 @@
 - `d01337b` - fix: rendering/loading problem resolved with applying optimization (2026-01-11)
 - `7a4b32c` - core refactoring at it's best (2026-01-11)
 
-### ✨ Latest Major Update - v5.0.0 Core Modernization & UI Enhancement (2026-01-12)
+### ✨ Latest Major Update - v5.1.1 Feature Expansion & Navigation Polish (2026-02-06)
+
+- **Cinematic Single Page Mode**: Fixed 3D camera centering and implemented synchronized dynamic lighting to ensure focused pages are perfectly illuminated.
+- **Unified Media Player**: Redesigned the media section with a sleek mode switcher and custom themed audio player, eliminating unnecessary windows for audio content.
+- **Local Audio Support**: Integrated local file imports for audio playback, featuring real-time progress tracking and synchronized volume controls.
+- **Restored Navigation**: Resolved issues with UI arrows and keyboard shortcuts by implementing missing navigation methods in the modular factory.
+- **Intelligent Device Adaptation**: Added automatic device detection to choose the optimal display mode (Booklet vs. Zoom) for mobile and desktop users.
+
+### ✨ Previous Major Update - v5.0.0 Core Modernization & UI Enhancement (2026-01-12)
 
 - **Library Modularization**: Completely refactored the DFlip core library into a modular ES6 structure, enabling easier bug fixing and feature development.
 - **Critical Scroll Fix**: Resolved a major conflict where scrolling through the thumbnail or bookmark lists would accidentally trigger the flipbook's zoom or page-turn logic.
@@ -45,6 +58,7 @@
 
 ### 📱 Mobile & UX Experience
 
+- **Multi-Modal Media**: Unified YouTube and Local Audio player with a sleek switcher UI.
 - **Touch Gesture Support**: Optimized swipe navigation for tablets and smartphones.
 - **Smart Sidebars**: Hover-aware sidebars that prevent accidental interactions while providing quick access.
 - **Custom Loaders**: Themed "flipping book" loading indicators for a branded experience.
@@ -88,6 +102,13 @@
 ---
 
 ## 🔄 Version History
+
+### v5.1.1 - Feature Expansion (2026-02-06)
+
+- Implemented Cinematic Single Page centering
+- Added Unified Media Player with Local Audio support
+- Fixed UI Arrow and Keyboard navigation
+- Synchronized lighting with camera movement
 
 ### v5.0.0 - Core Modernization (2026-01-12)
 
